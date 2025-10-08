@@ -110,7 +110,7 @@
 				}
 				&-pages {
 					&-single {
-						width: 315px;
+						width: 500px;
 						border-inline-start: 1px solid var(--tj-color-border-1);
 						padding: 26px 30px 20px;
 
@@ -138,9 +138,9 @@
 							.feature-content {
 								padding: 30px 28px 30px;
 								.title {
-									font-size: 74px;
+									font-size: 60px;
 									color: var(--tj-color-common-white);
-									margin-bottom: 15px;
+									margin-bottom: 2px;
 									line-height: 1;
 									@media #{$xl} {
 										font-size: 60px;
@@ -154,14 +154,14 @@
 								}
 								> span {
 									display: block;
-									font-size: 20px;
+									font-size: 26px;
 									font-family: var(--tj-ff-heading);
 									font-weight: var(--tj-fw-medium);
 									color: var(--tj-color-common-white);
 									line-height: 1;
-									margin-bottom: 26px;
+									margin-bottom: 14px;
 									@media #{$xs} {
-										margin-bottom: 20px;
+										margin-bottom: 10px;
 									}
 								}
 								.feature-contact {
@@ -388,7 +388,7 @@
 				}
 				&-title {
 					line-height: 1.375;
-					max-width: 171px;
+					max-width: 175px;
 					display: inline-block;
 					@media #{$md,$sm,$xs} {
 						max-width: 156px;
