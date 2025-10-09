@@ -81,64 +81,56 @@ START: Hero CSS
 				padding: 30px;
 
 				.title {
-					color: var(--tj-color-common-white);
-					font-size: 74px;
-					line-height: 1.216;
-					text-align: center;
-					position: relative;
-					margin-bottom: 20px;
-					&::before {
-						content: "";
-						position: absolute;
-						top: 0;
-						inset-inline-start: 0;
-						width: 42px;
-						height: 100%;
-						background-color: var(--tj-color-common-white);
-						mask-image: url(../images/shape/leafs.svg);
-						mask-repeat: no-repeat;
-						mask-size: contain;
-					}
-					&::after {
-						content: "";
-						position: absolute;
-						top: 0;
-						inset-inline-end: 0;
-						width: 42px;
-						height: 100%;
-						background-color: var(--tj-color-common-white);
-						mask-image: url(../images/shape/leafs.svg);
-						mask-repeat: no-repeat;
-						mask-size: contain;
-						transform: scaleX(-1);
-					}
-					@media #{$sm, $xs} {
-						font-size: 50px;
-					}
+				color: var(--tj-color-text-body-1);
+				font-size: 34px;
+				line-height: 1.216;
+				text-align: center;
+				position: relative;
+				margin-bottom: 20px;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+
+				i {
+					font-size: 2em;
+					line-height: 1;
+					display: inline-block;
 				}
-				.desc {
-					color: var(--tj-color-common-white);
-					font-size: 18px;
-					font-weight: var(--tj-fw-sbold);
-					letter-spacing: -0.03em;
-					margin: 0;
-					@media #{$sm} {
-						font-size: 16px;
-					}
-					@media #{$xs} {
-						font-size: 14px;
-					}
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					inset-inline-start: 0;
+					width: 42px;
+					height: 100%;
+					background-color: var(--tj-color-common-white);
+					mask-image: url(../images/shape/leafs.svg);
+					mask-repeat: no-repeat;
+					mask-size: contain;
 				}
+
+				&::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					inset-inline-end: 0;
+					width: 42px;
+					height: 100%;
+					background-color: var(--tj-color-common-white);
+					mask-image: url(../images/shape/leafs.svg);
+					mask-repeat: no-repeat;
+					mask-size: contain;
+					transform: scaleX(-1);
+				}
+
 				@media #{$sm, $xs} {
-					max-width: 200px;
-					padding: 26px;
-					top: 15px;
-					inset-inline-start: 15px;
+					font-size: 50px;
 				}
-				@media #{ $xs} {
-					max-width: 158px;
-					padding: 15px;
-				}
+			}
+
 			}
 		}
 	}
