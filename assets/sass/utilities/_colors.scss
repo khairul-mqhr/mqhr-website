@@ -4,39 +4,39 @@ $colors: (
 		black: #000000,
 	),
 	heading: (
-		primary: #0c1e21,
+		primary: #2a1638, // deep lavender for contrast
 	),
 	text: (
-		body: #364e52,
-		body-2: #a9b8b8,
-		body-3: #67787a,
-		body-4: #18292c,
-		body-5: #ffffffcc,
+		body: #3b2a4e, // dark muted purple
+		body-2: #a995c5, // soft lilac-gray
+		body-3: #8b7aa8, // muted pastel violet
+		body-4: #72618d, // subtle mauve tone
+		body-5: #ffffffcc, // soft white overlay
 	),
 	theme: (
-		primary: #1e8a8a,
-		bg: #d8e5e5,
-		bg-2: #cee0e0,
-		bg-3: #202e30,
-		dark: #0c1e21,
-		dark-2: #18292c,
-		dark-3: #364e52,
-		dark-4: #67787a,
-		dark-5: #676e7a,
+		primary: #f48fb1, // soft bubblegum pink
+		bg: #fdf7fb, // ultra-soft pink background
+		bg-2: #f7eaf4, // light lilac section background
+		bg-3: #2a1638, // dark section contrast
+		dark: #1a0f26, // deep plum
+		dark-2: #2a1638,
+		dark-3: #3b2a4e,
+		dark-4: #5d4b7a,
+		dark-5: #7a6798,
 	),
 	red: (
-		1: #ff0000,
+		1: #f06292, // soft rosy accent
 	),
 	grey: (
-		1: #ecf0f0,
-		2: #a9b8b8,
+		1: #f5ebf3, // light lavender-gray
+		2: #d8c9dd, // muted soft border tone
 		3: #ffffff1a,
 	),
 	border: (
-		1: #c9d1d1,
-		2: #313d3d,
+		1: #eed5e6, // pale pink border
+		2: #3b2a4e,
 		3: #ffffff26,
 		4: #ffffff33,
-		5: #1e8a8a26,
+		5: #f48fb126,
 	),
 );
