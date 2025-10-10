@@ -5,6 +5,10 @@ START: Team Details CSS
 
 .team-details {
 	padding: 120px 0;
+
+	 p {
+    text-align: justify;
+  }
 	@media #{$lg} {
 		padding: 100px 0;
 	}

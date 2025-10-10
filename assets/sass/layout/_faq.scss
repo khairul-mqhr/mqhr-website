@@ -227,7 +227,7 @@ START: Faq CSS
 	&.style-2 {
 		.accordion-item {
 			&.active {
-				background-color: var(--tj-color-theme-primary);
+				background-color: var(--tj-color-theme-dark);
 				.faq-title {
 					color: var(--tj-color-common-white);
 					border-color: rgba(255, 255, 255, 0.15);

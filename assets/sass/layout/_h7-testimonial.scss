@@ -90,7 +90,7 @@ START: Testimonial CSS
 					height: 100px;
 				}
 				.title {
-					color: var(--tj-color-common-white);
+					color: var(--tj-color-theme-dark);
 				}
 				.designation {
 					color: var(--tj-color-text-body-2);
@@ -98,8 +98,8 @@ START: Testimonial CSS
 			}
 
 			.desc {
-				color: var(--tj-color-grey-1);
-				text-align: center;
+				color: var(--tj-color-theme-dark);
+				text-align: justify;
 			}
 			.star-ratings {
 				margin: 0 auto;
