@@ -1,42 +1,42 @@
 $colors: (
-	common: (
-		white: #ffffff,
-		black: #000000,
-	),
-	heading: (
-		primary: #2a1638, // deep lavender for contrast
-	),
-	text: (
-		body: #3b2a4e, // dark muted purple
-		body-2: #a995c5, // soft lilac-gray
-		body-3: #8b7aa8, // muted pastel violet
-		body-4: #72618d, // subtle mauve tone
-		body-5: #ffffffcc, // soft white overlay
-	),
-	theme: (
-		primary: #f48fb1, // soft bubblegum pink
-		bg: #fdf7fb, // ultra-soft pink background
-		bg-2: #f7eaf4, // light lilac section background
-		bg-3: #2a1638, // dark section contrast
-		dark: #1a0f26, // deep plum
-		dark-2: #2a1638,
-		dark-3: #3b2a4e,
-		dark-4: #5d4b7a,
-		dark-5: #7a6798,
-	),
-	red: (
-		1: #f06292, // soft rosy accent
-	),
-	grey: (
-		1: #f5ebf3, // light lavender-gray
-		2: #d8c9dd, // muted soft border tone
-		3: #ffffff1a,
-	),
-	border: (
-		1: #eed5e6, // pale pink border
-		2: #3b2a4e,
-		3: #ffffff26,
-		4: #ffffff33,
-		5: #f48fb126,
-	),
+    common: (
+        white: #ffffff,
+        black: #000000,
+    ),
+    heading: (
+        primary: #2a0e3a, // deep lavender for contrast
+    ),
+    text: (
+        body: #2e1c3f, // dark muted purple with more contrast
+        body-2: #9a84c2, // deeper soft lilac-gray
+        body-3: #7a68a0, // more saturated pastel violet
+        body-4: #65527f, // stronger mauve tone
+        body-5: #ffffffe6, // brighter soft white overlay
+    ),
+    theme: (
+        primary: #ec6fa8, // punchier bubblegum pink
+        bg: #fff6fb, // brighter ultra-soft pink background
+        bg-2: #f9e4f2, // lighter lilac section background
+        bg-3: #2a0e3a, // dark section contrast
+        dark: #1a0a26, // deeper plum
+        dark-2: #2a0e3a,
+        dark-3: #2e1c3f,
+        dark-4: #4e3a6b,
+        dark-5: #6a5890,
+    ),
+    red: (
+        1: #f78aa0, // soft rosy accent with more pop
+    ),
+    grey: (
+        1: #f7e6f0, // brighter light lavender-gray
+        2: #e0cfe6, // deeper muted soft border tone
+        3: #ffffff1a,
+    ),
+    border: (
+        1: #eed5e6, // pale pink border
+        2: #2e1c3f,
+        3: #ffffff26,
+        4: #ffffff33,
+        5: #ec6fa826,
+    ),
 );

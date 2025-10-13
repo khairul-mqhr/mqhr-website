@@ -83,30 +83,30 @@ START: Theme Default CSS
    */
   --tj-color-common-white: #ffffff;
   --tj-color-common-black: #000000;
-  --tj-color-heading-primary: #2a1638;
-  --tj-color-text-body: #3b2a4e;
-  --tj-color-text-body-2: #a995c5;
-  --tj-color-text-body-3: #8b7aa8;
-  --tj-color-text-body-4: #72618d;
-  --tj-color-text-body-5: rgba(255, 255, 255, 0.8);
-  --tj-color-theme-primary: #f48fb1;
-  --tj-color-theme-bg: #fdf7fb;
-  --tj-color-theme-bg-2: #f7eaf4;
-  --tj-color-theme-bg-3: #2a1638;
-  --tj-color-theme-dark: #1a0f26;
-  --tj-color-theme-dark-2: #2a1638;
-  --tj-color-theme-dark-3: #3b2a4e;
-  --tj-color-theme-dark-4: #5d4b7a;
-  --tj-color-theme-dark-5: #7a6798;
-  --tj-color-red-1: #f06292;
-  --tj-color-grey-1: #f5ebf3;
-  --tj-color-grey-2: #d8c9dd;
+  --tj-color-heading-primary: #2a0e3a;
+  --tj-color-text-body: #2e1c3f;
+  --tj-color-text-body-2: #9a84c2;
+  --tj-color-text-body-3: #7a68a0;
+  --tj-color-text-body-4: #65527f;
+  --tj-color-text-body-5: rgba(255, 255, 255, 0.9019607843);
+  --tj-color-theme-primary: #ec6fa8;
+  --tj-color-theme-bg: #fff6fb;
+  --tj-color-theme-bg-2: #f9e4f2;
+  --tj-color-theme-bg-3: #2a0e3a;
+  --tj-color-theme-dark: #1a0a26;
+  --tj-color-theme-dark-2: #2a0e3a;
+  --tj-color-theme-dark-3: #2e1c3f;
+  --tj-color-theme-dark-4: #4e3a6b;
+  --tj-color-theme-dark-5: #6a5890;
+  --tj-color-red-1: #f78aa0;
+  --tj-color-grey-1: #f7e6f0;
+  --tj-color-grey-2: #e0cfe6;
   --tj-color-grey-3: rgba(255, 255, 255, 0.1019607843);
   --tj-color-border-1: #eed5e6;
-  --tj-color-border-2: #3b2a4e;
+  --tj-color-border-2: #2e1c3f;
   --tj-color-border-3: rgba(255, 255, 255, 0.1490196078);
   --tj-color-border-4: rgba(255, 255, 255, 0.2);
-  --tj-color-border-5: rgba(244, 143, 177, 0.1490196078);
+  --tj-color-border-5: rgba(236, 111, 168, 0.1490196078);
 }
 
 * {
