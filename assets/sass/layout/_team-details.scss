@@ -4,11 +4,8 @@ START: Team Details CSS
 ----------------------------------------*/
 
 .team-details {
+	text-align: justify;
 	padding: 120px 0;
-
-	 p {
-    text-align: justify;
-  }
 	@media #{$lg} {
 		padding: 100px 0;
 	}

@@ -5,7 +5,7 @@ START: Hero CSS
 ----------------------------------------*/
 .h4-banner {
 	&-section {
-		background-color: var(--tj-color-theme-dark-6);
+		background-color: var(--tj-color-theme-dark);
 		border-radius: 12px;
 		padding: 0 80px;
 		position: relative;
@@ -81,56 +81,64 @@ START: Hero CSS
 				padding: 30px;
 
 				.title {
-				color: var(--tj-color-text-body-1);
-				font-size: 34px;
-				line-height: 1.216;
-				text-align: center;
-				position: relative;
-				margin-bottom: 20px;
-
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				gap: 10px;
-
-				i {
-					font-size: 2em;
-					line-height: 1;
-					display: inline-block;
+					color: var(--tj-color-common-white);
+					font-size: 74px;
+					line-height: 1.216;
+					text-align: center;
+					position: relative;
+					margin-bottom: 20px;
+					&::before {
+						content: "";
+						position: absolute;
+						top: 0;
+						inset-inline-start: 0;
+						width: 42px;
+						height: 100%;
+						background-color: var(--tj-color-common-white);
+						mask-image: url(../images/shape/leafs.svg);
+						mask-repeat: no-repeat;
+						mask-size: contain;
+					}
+					&::after {
+						content: "";
+						position: absolute;
+						top: 0;
+						inset-inline-end: 0;
+						width: 42px;
+						height: 100%;
+						background-color: var(--tj-color-common-white);
+						mask-image: url(../images/shape/leafs.svg);
+						mask-repeat: no-repeat;
+						mask-size: contain;
+						transform: scaleX(-1);
+					}
+					@media #{$sm, $xs} {
+						font-size: 50px;
+					}
 				}
-
-				&::before {
-					content: "";
-					position: absolute;
-					top: 0;
-					inset-inline-start: 0;
-					width: 42px;
-					height: 100%;
-					background-color: var(--tj-color-common-white);
-					mask-image: url(../images/shape/leafs.svg);
-					mask-repeat: no-repeat;
-					mask-size: contain;
+				.desc {
+					color: var(--tj-color-common-white);
+					font-size: 18px;
+					font-weight: var(--tj-fw-sbold);
+					letter-spacing: -0.03em;
+					margin: 0;
+					@media #{$sm} {
+						font-size: 16px;
+					}
+					@media #{$xs} {
+						font-size: 14px;
+					}
 				}
-
-				&::after {
-					content: "";
-					position: absolute;
-					top: 0;
-					inset-inline-end: 0;
-					width: 42px;
-					height: 100%;
-					background-color: var(--tj-color-common-white);
-					mask-image: url(../images/shape/leafs.svg);
-					mask-repeat: no-repeat;
-					mask-size: contain;
-					transform: scaleX(-1);
-				}
-
 				@media #{$sm, $xs} {
-					font-size: 50px;
+					max-width: 200px;
+					padding: 26px;
+					top: 15px;
+					inset-inline-start: 15px;
 				}
-			}
-
+				@media #{ $xs} {
+					max-width: 158px;
+					padding: 15px;
+				}
 			}
 		}
 	}
@@ -188,7 +196,7 @@ START: Hero CSS
 			}
 		}
 		.sub-title {
-			color: var(--tj-color-theme-dark-6);
+			color: var(--tj-color-common-white);
 			font-size: 14px;
 			line-height: 1;
 			letter-spacing: 1.4px;
@@ -202,19 +210,19 @@ START: Hero CSS
 			margin-bottom: 13px;
 			border-radius: 4px;
 			i {
-				color: var(--tj-color-theme-dark-6);
+				color: var(--tj-color-theme-primary);
 				font-size: 22px;
 			}
 		}
 		.banner-title {
 			max-width: 1180px;
-			color: var(--tj-color-theme-dark-6);
+			color: var(--tj-color-common-white);
 			font-size: 96px;
 			line-height: 1.042;
 			margin-bottom: 22px;
 			span {
 				display: inline-block;
-				color: var(--tj-color-theme-dark-6);
+				color: var(--tj-color-theme-primary);
 				font-weight: var(--tj-fw-medium);
 			}
 			@media #{$xxl} {
@@ -256,7 +264,7 @@ START: Hero CSS
 		}
 		.banner-desc {
 			max-width: 428px;
-			color: var(--tj-color-text-body-1);
+			color: var(--tj-color-text-body-2);
 			font-size: 18px;
 			line-height: 1.444;
 			padding-inline-start: 15px;

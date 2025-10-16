@@ -28,12 +28,38 @@ START: Choose CSS
 				opacity: 0.7;
 				z-index: -1;
 			}
+			.title {
+				font-weight: var(--tj-fw-sbold);
+				margin-bottom: 20px;
+				@media #{$md, $sm, $xs} {
+					font-size: 18px;
+					margin-bottom: 10px;
+				}
+			}
+
 			.count-icon {
-				background-color: var(--tj-color-theme-primary);
-				color: var(--tj-color-common-white);
+				background-color: var(--tj-color-theme-dark);
+				display: inline-flex;
+				color: var(--tj-color-theme-primary);
+				font-size: 54px;
+				line-height: 1;
+				max-width: 54px;
+				margin-bottom: 43px;
+				i {
+					line-height: 1;
+					display: inline-flex;
+				}
+				@media #{$xl, $lg} {
+					margin-bottom: 30px;
+				}
+				@media #{$md, $sm, $xs} {
+					font-size: 65px;
+					max-width: 65px;
+					margin-bottom: 20px;
+				}
 			}
 			.count-text {
-				color: var(--tj-color-text-body-2);
+				color: var(--tj-color-common-white);
 			}
 			.inline-content {
 				color: var(--tj-color-common-white);

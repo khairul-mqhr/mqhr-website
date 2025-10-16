@@ -71,7 +71,7 @@ START: Testimonial CSS
 		}
 		.testimonial-item {
 			border-color: transparent;
-			background-color: var(--tj-color-grey-3);
+			background-color: var(--tj-color-grey-1);
 			padding: 30px 30px 35px;
 
 			@media #{$xl, $lg,$md,$sm, $xs} {
@@ -98,7 +98,7 @@ START: Testimonial CSS
 			}
 
 			.desc {
-				color: var(--tj-color-theme-dark);
+				color: var(--tj-color-text-body-2);
 				text-align: justify;
 			}
 			.star-ratings {

@@ -74,7 +74,7 @@ START: Process CSS
 				}
 				.desc {
 					margin-bottom: 0;
-					color: var(--tj-color-text-body-2);
+					color: var(--tj-color-common-white);
 				}
 			}
 			&-icon {
@@ -115,9 +115,9 @@ START: Process CSS
 				justify-content: center;
 				line-height: 1;
 				font-weight: var(--tj-fw-sbold);
-				color: var(--tj-color-text-body-2);
+				color: var(--tj-color-common-white);
 				z-index: 1;
-				&::before,
+				&::before
 				&::after {
 					content: "";
 					position: absolute;

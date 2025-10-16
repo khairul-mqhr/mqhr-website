@@ -46,13 +46,13 @@
 /**----------------------------------------
 START: Theme Default CSS
 ----------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 :root {
   /**
      @Font-Family Declaration
    */
-  --tj-ff-body: 'Mona Sans', sans-serif;;
-  --tj-ff-heading: 'Mona Sans', sans-serif;;
+  --tj-ff-body: 'Poppins', sans-serif;
+  --tj-ff-heading: 'Poppins', sans-serif;
   --tj-ff-fontawesome: "Font Awesome 6 Pro";
   /**
      @Font-weight Declaration
@@ -83,30 +83,30 @@ START: Theme Default CSS
    */
   --tj-color-common-white: #ffffff;
   --tj-color-common-black: #000000;
-  --tj-color-heading-primary: #2a0e3a;
-  --tj-color-text-body: #2e1c3f;
-  --tj-color-text-body-2: #9a84c2;
-  --tj-color-text-body-3: #7a68a0;
-  --tj-color-text-body-4: #65527f;
-  --tj-color-text-body-5: rgba(255, 255, 255, 0.9019607843);
-  --tj-color-theme-primary: #ec6fa8;
-  --tj-color-theme-bg: #fff6fb;
-  --tj-color-theme-bg-2: #f9e4f2;
-  --tj-color-theme-bg-3: #2a0e3a;
-  --tj-color-theme-dark: #1a0a26;
-  --tj-color-theme-dark-2: #2a0e3a;
-  --tj-color-theme-dark-3: #2e1c3f;
-  --tj-color-theme-dark-4: #4e3a6b;
-  --tj-color-theme-dark-5: #6a5890;
-  --tj-color-red-1: #f78aa0;
-  --tj-color-grey-1: #f7e6f0;
-  --tj-color-grey-2: #e0cfe6;
+  --tj-color-heading-primary: #663695;
+  --tj-color-text-body: #2E2A3B;
+  --tj-color-text-body-2: #6B6678;
+  --tj-color-text-body-3: #AA4D9D;
+  --tj-color-text-body-4: #3FB870;
+  --tj-color-text-body-5: rgba(255, 255, 255, 0.8);
+  --tj-color-theme-primary: #3FB870;
+  --tj-color-theme-bg: #ffffff;
+  --tj-color-theme-bg-2: #F7F8FA;
+  --tj-color-theme-bg-3: #402060;
+  --tj-color-theme-dark: #663695;
+  --tj-color-theme-dark-2: #4A2D72;
+  --tj-color-theme-dark-3: #3A255E;
+  --tj-color-theme-dark-4: #AA4D9D;
+  --tj-color-theme-dark-5: #E2A8DD;
+  --tj-color-red-1: #F56C7C;
+  --tj-color-grey-1: #F5F5F7;
+  --tj-color-grey-2: #D6D6E0;
   --tj-color-grey-3: rgba(255, 255, 255, 0.1019607843);
-  --tj-color-border-1: #eed5e6;
-  --tj-color-border-2: #2e1c3f;
-  --tj-color-border-3: rgba(255, 255, 255, 0.1490196078);
-  --tj-color-border-4: rgba(255, 255, 255, 0.2);
-  --tj-color-border-5: rgba(236, 111, 168, 0.1490196078);
+  --tj-color-border-1: #E1E1E6;
+  --tj-color-border-2: #663695;
+  --tj-color-border-3: #3FB870;
+  --tj-color-border-4: #E2A8DD;
+  --tj-color-border-5: rgba(63, 184, 112, 0.1490196078);
 }
 
 * {
@@ -1946,7 +1946,7 @@ START: Theme Header CSS
 .mainmenu ul > li > .mega-menu-service-single .mega-menu-service-title,
 .mobile_menu ul > li > .mega-menu-service-single .mega-menu-service-title {
   line-height: 1.375;
-  max-width: 175px;
+  max-width: 171px;
   display: inline-block;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
@@ -2333,7 +2333,7 @@ START: Theme Footer CSS
   color: var(--tj-color-theme-bg);
 }
 .social-links ul li a:hover {
-  background-color: var(--tj-color-theme-primary);
+  background-color: var(--tj-color-theme-dark-4);
   transform: translateY(-3px);
 }
 .social-links ul li a:hover i {
@@ -2583,7 +2583,7 @@ START: Theme Footer CSS
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  color: var(--tj-color-text-body);
+  color: var(--tj-color-common-white);
 }
 .copyright-content-area .footer-contact ul li a .icon {
   display: inline-flex;
@@ -2676,10 +2676,10 @@ START: Theme Footer CSS
 .copyright-content-area .copyright-menu ul li a {
   font-size: 16px;
   font-weight: var(--tj-fw-regular);
-  color: var(--tj-color-text-body-2);
+  color: var(--tj-color-common-white);
 }
 .copyright-content-area .copyright-menu ul li a:hover {
-  color: var(--tj-color-common-white);
+  color: var(--tj-color-theme-primary);
 }
 .copyright-content-area .copyright-menu ul li:last-child {
   padding-inline-end: 0;
@@ -2716,7 +2716,7 @@ START: Theme Footer CSS
   color: var(--tj-color-common-white);
 }
 .tj-footer-section.footer-2 .footer-widget ul li a {
-  color: var(--tj-color-text-body-2);
+  color: var(--tj-color-common-white);
 }
 .tj-footer-section.footer-2 .footer-widget ul li a:hover {
   color: var(--tj-color-theme-primary);
@@ -2732,7 +2732,7 @@ START: Theme Footer CSS
   width: 350px;
   height: 300px;
   border-radius: 50%;
-  background: var(--tj-color-theme-primary);
+  background: var(--tj-color-theme-dark);
   -webkit-filter: blur(50px);
   filter: blur(50px);
   opacity: 0.15;
@@ -2858,7 +2858,7 @@ START: Theme Footer CSS
   margin-bottom: 0;
 }
 .footer-contact-info .contact-item span {
-  color: var(--tj-color-text-body-2);
+  color: var(--tj-color-common-white);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -2894,7 +2894,7 @@ START: Theme Footer CSS
   padding: 25px 0;
 }
 .tj-copyright-area-2 .copyright-text p {
-  color: var(--tj-color-text-body-2);
+  color: var(--tj-color-common-white);
 }
 .tj-copyright-area-2 .copyright-text a {
   color: var(--tj-color-common-white);
@@ -3475,7 +3475,7 @@ START: Theme Search CSS
   margin-bottom: 40px;
 }
 .offcanvas-text p {
-  color: var(--tj-color-text-body-2);
+  color: var(--tj-color-common-white);
   margin-bottom: 0;
 }
 
@@ -7427,9 +7427,9 @@ START: Choose CSS
 .choose-box .choose-icon {
   display: inline-flex;
   color: var(--tj-color-theme-primary);
-  font-size: 88px;
+  font-size: 54px;
   line-height: 1;
-  max-width: 88px;
+  max-width: 54px;
   margin-bottom: 43px;
 }
 .choose-box .choose-icon i {
@@ -7450,6 +7450,7 @@ START: Choose CSS
 }
 .choose-box .title {
   font-weight: var(--tj-fw-sbold);
+  color: var(--tj-color-theme-dark);
   margin-bottom: 20px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
@@ -7474,7 +7475,7 @@ START: Choose CSS
   animation: gelatine 0.6s;
 }
 .choose-box:hover .btn-icon {
-  background-color: var(--tj-color-theme-dark);
+  background-color: var(--tj-color-common-white);
 }
 .choose-box:hover .btn-text,
 .choose-box:hover .desc,
@@ -7504,6 +7505,107 @@ START: Choose CSS
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .choose-box.style-2 {
+    padding: 30px 15px;
+  }
+}
+
+.choose-box-purple {
+  height: 100%;
+  padding: 50px 28px 45px;
+  background-color: var(--tj-color-theme-dark);
+  transition: all 0.4s ease-in-out;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.choose-box-purple .choose-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.choose-box-purple .choose-icon {
+  display: inline-flex;
+  color: var(--tj-color-common-white);
+  font-size: 54px;
+  line-height: 1;
+  max-width: 54px;
+  margin-bottom: 43px;
+}
+.choose-box-purple .choose-icon i {
+  line-height: 1;
+  display: inline-flex;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .choose-box-purple .choose-icon {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .choose-box-purple .choose-icon {
+    font-size: 65px;
+    max-width: 65px;
+    margin-bottom: 20px;
+  }
+}
+.choose-box-purple .title {
+  font-weight: var(--tj-fw-sbold);
+  color: var(--tj-color-common-white);
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .choose-box-purple .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+.choose-box-purple .desc {
+  color: var(--tj-color-common-white);
+  margin-bottom: 0;
+}
+.choose-box-purple .text-btn {
+  margin-top: auto;
+  padding-top: 27px;
+  justify-content: flex-start;
+}
+.choose-box-purple:hover {
+  background-color: var(--tj-color-theme-primary);
+}
+.choose-box-purple:hover .choose-icon {
+  color: var(--tj-color-common-white);
+  animation: gelatine 0.6s;
+}
+.choose-box-purple:hover .btn-icon {
+  background-color: var(--tj-color-common-white);
+}
+.choose-box-purple:hover .btn-text,
+.choose-box-purple:hover .desc,
+.choose-box-purple:hover .title {
+  color: var(--tj-color-common-white);
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .choose-box-purple {
+    padding: 40px 20px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .choose-box-purple {
+    padding: 30px 15px;
+  }
+}
+.choose-box-purple.style-2 {
+  padding: 40px 28px;
+}
+.choose-box-purple.style-2 .choose-icon {
+  margin-bottom: 25px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .choose-box-purple.style-2 .choose-icon {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .choose-box-purple.style-2 {
     padding: 30px 15px;
   }
 }
@@ -10489,7 +10591,7 @@ START: Faq CSS
   }
 }
 .tj-faq.style-2 .accordion-item.active {
-  background-color: var(--tj-color-theme-dark);
+  background-color: var(--tj-color-theme-primary);
 }
 .tj-faq.style-2 .accordion-item.active .faq-title {
   color: var(--tj-color-common-white);
@@ -10536,6 +10638,18 @@ START: Blog CSS
   overflow: hidden;
   position: relative;
 }
+.blog-item .blog-thumb::before {
+  content: "";
+  background-color: var(--tj-color-theme-dark);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  inset-inline-start: 0;
+  opacity: 0.25;
+  z-index: 1;
+  pointer-events: none;
+}
 .blog-item .blog-thumb img {
   width: 100%;
   height: 100%;
@@ -10544,7 +10658,7 @@ START: Blog CSS
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), (max-width: 575px) {
   .blog-item .blog-thumb {
-    height: 200px;
+    height: 2px;
   }
 }
 .blog-item .blog-content {
@@ -11366,7 +11480,7 @@ START: Contact CSS
   display: block;
   font-size: 14px;
   line-height: 1;
-  color: var(--tj-color-text-body-2);
+  color: var(--tj-color-grey-2);
   margin-bottom: 7px;
 }
 .contact-info .contact-item a:hover {
@@ -12000,7 +12114,7 @@ START: Theme Slider CSS
   margin-bottom: 10px;
 }
 .tj-slider-item .slider-content .slider-title span {
-  color: var(--tj-color-text-body-2);
+  color: var(--tj-color-theme-primary);
 }
 .tj-slider-item .slider-content .slider-title img {
   max-width: 188px;
@@ -12045,7 +12159,7 @@ START: Theme Slider CSS
   max-width: 440px;
   font-size: 18px;
   line-height: 1.444;
-  color: var(--tj-color-text-body-2);
+  color: var(--tj-color-grey-1);
 }
 .tj-slider-item .slider-content .slider-btn {
   margin-top: 25px;
@@ -12727,10 +12841,8 @@ START: Team CSS
 START: Team Details CSS
 ----------------------------------------*/
 .team-details {
-  padding: 120px 0;
-}
-.team-details p {
   text-align: justify;
+  padding: 120px 0;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .team-details {
@@ -13221,9 +13333,14 @@ START: Blog Details CSS
   margin-bottom: 25px;
   border-radius: 12px;
   overflow: hidden;
+  aspect-ratio: 1/1;
+  width: 100%;
 }
 .post-details-wrapper .image-box img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .post-details-wrapper .blog-text h3 {
   margin-bottom: 25px;
@@ -13413,7 +13530,7 @@ START: Blog Details CSS
 }
 .blog-category-two .category-item .text {
   font-weight: var(--tj-fw-sbold);
-  line-height: 1;
+  line-height: 1.4;
   margin-bottom: 0;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
@@ -14954,7 +15071,7 @@ START: Animate CSS
 START: Hero CSS
 ----------------------------------------*/
 .h4-banner-section {
-  background-color: var(--tj-color-theme-dark-6);
+  background-color: var(--tj-color-theme-dark);
   border-radius: 12px;
   padding: 0 80px;
   position: relative;
@@ -15036,21 +15153,12 @@ START: Hero CSS
   padding: 30px;
 }
 .h4-banner-section .banner-img-area .h4-rating-box .title {
-  color: var(--tj-color-text-body-1);
-  font-size: 34px;
+  color: var(--tj-color-common-white);
+  font-size: 74px;
   line-height: 1.216;
   text-align: center;
   position: relative;
   margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-.h4-banner-section .banner-img-area .h4-rating-box .title i {
-  font-size: 2em;
-  line-height: 1;
-  display: inline-block;
 }
 .h4-banner-section .banner-img-area .h4-rating-box .title::before {
   content: "";
@@ -15080,6 +15188,37 @@ START: Hero CSS
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .h4-banner-section .banner-img-area .h4-rating-box .title {
     font-size: 50px;
+  }
+}
+.h4-banner-section .banner-img-area .h4-rating-box .desc {
+  color: var(--tj-color-common-white);
+  font-size: 18px;
+  font-weight: var(--tj-fw-sbold);
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .h4-banner-section .banner-img-area .h4-rating-box .desc {
+    font-size: 16px;
+  }
+}
+@media (max-width: 575px) {
+  .h4-banner-section .banner-img-area .h4-rating-box .desc {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .h4-banner-section .banner-img-area .h4-rating-box {
+    max-width: 200px;
+    padding: 26px;
+    top: 15px;
+    inset-inline-start: 15px;
+  }
+}
+@media (max-width: 575px) {
+  .h4-banner-section .banner-img-area .h4-rating-box {
+    max-width: 158px;
+    padding: 15px;
   }
 }
 .h4-banner-area {
@@ -15148,7 +15287,7 @@ START: Hero CSS
   }
 }
 .h4-banner-content .sub-title {
-  color: var(--tj-color-theme-dark-6);
+  color: var(--tj-color-common-white);
   font-size: 14px;
   line-height: 1;
   letter-spacing: 1.4px;
@@ -15163,19 +15302,19 @@ START: Hero CSS
   border-radius: 4px;
 }
 .h4-banner-content .sub-title i {
-  color: var(--tj-color-theme-dark-6);
+  color: var(--tj-color-theme-primary);
   font-size: 22px;
 }
 .h4-banner-content .banner-title {
   max-width: 1180px;
-  color: var(--tj-color-theme-dark-6);
+  color: var(--tj-color-common-white);
   font-size: 96px;
   line-height: 1.042;
   margin-bottom: 22px;
 }
 .h4-banner-content .banner-title span {
   display: inline-block;
-  color: var(--tj-color-theme-dark-6);
+  color: var(--tj-color-theme-primary);
   font-weight: var(--tj-fw-medium);
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
@@ -15230,7 +15369,7 @@ START: Hero CSS
 }
 .h4-banner-content .banner-desc {
   max-width: 428px;
-  color: var(--tj-color-text-body-1);
+  color: var(--tj-color-text-body-2);
   font-size: 18px;
   line-height: 1.444;
   padding-inline-start: 15px;
@@ -15276,12 +15415,43 @@ START: Choose CSS
   opacity: 0.7;
   z-index: -1;
 }
+.tj-choose-section .countup-item.style-2 .title {
+  font-weight: var(--tj-fw-sbold);
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .tj-choose-section .countup-item.style-2 .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
 .tj-choose-section .countup-item.style-2 .count-icon {
-  background-color: var(--tj-color-theme-primary);
-  color: var(--tj-color-common-white);
+  background-color: var(--tj-color-theme-dark);
+  display: inline-flex;
+  color: var(--tj-color-theme-primary);
+  font-size: 54px;
+  line-height: 1;
+  max-width: 54px;
+  margin-bottom: 43px;
+}
+.tj-choose-section .countup-item.style-2 .count-icon i {
+  line-height: 1;
+  display: inline-flex;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .tj-choose-section .countup-item.style-2 .count-icon {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .tj-choose-section .countup-item.style-2 .count-icon {
+    font-size: 65px;
+    max-width: 65px;
+    margin-bottom: 20px;
+  }
 }
 .tj-choose-section .countup-item.style-2 .count-text {
-  color: var(--tj-color-text-body-2);
+  color: var(--tj-color-common-white);
 }
 .tj-choose-section .countup-item.style-2 .inline-content {
   color: var(--tj-color-common-white);
@@ -15314,7 +15484,7 @@ START: About CSS
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 .about-content-area.style-3 .sec-heading .subtitle-text {
   max-width: 200px;
@@ -16607,7 +16777,7 @@ START: Blog CSS
   position: absolute;
   display: inline-block;
   top: calc(50% - 25px);
-  text-align: justify;
+  text-align: center;
   font-size: 48px;
   line-height: 1;
   font-weight: bold;
@@ -20456,7 +20626,7 @@ START: Testimonial CSS
 }
 .h7-testimonial-wrapper .testimonial-item {
   border-color: transparent;
-  background-color: var(--tj-color-grey-3);
+  background-color: var(--tj-color-grey-1);
   padding: 30px 30px 35px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
@@ -20484,7 +20654,7 @@ START: Testimonial CSS
   color: var(--tj-color-text-body-2);
 }
 .h7-testimonial-wrapper .testimonial-item .desc {
-  color: var(--tj-color-theme-dark);
+  color: var(--tj-color-text-body-2);
   text-align: justify;
 }
 .h7-testimonial-wrapper .testimonial-item .star-ratings {
@@ -24330,12 +24500,12 @@ START: Theme Footer CSS
   padding-top: 0;
 }
 .tj-footer-section.h10-footer .h10-footer-title {
-  font-size: 64px;
+  font-size: 54px;
   color: var(--tj-color-common-white);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .tj-footer-section.h10-footer .h10-footer-title {
-    font-size: 58px;
+    font-size: 48px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
@@ -24384,7 +24554,7 @@ START: Theme Footer CSS
   letter-spacing: -0.03em;
   line-height: 1;
   padding: 5px 20px 8px;
-  border: 1px solid var(--tj-color-grey-3);
+  border: 1px solid var(--tj-color-common-white);
   border-radius: 50px;
   margin-top: 24px;
 }
@@ -24751,7 +24921,7 @@ START: Service CSS
   justify-content: center;
   line-height: 1;
   font-weight: var(--tj-fw-sbold);
-  color: var(--tj-color-theme-dark-3);
+  color: var(--tj-color-theme-prmary);
   margin-bottom: 0;
   z-index: 1;
 }
@@ -24838,9 +25008,10 @@ START: Home 10 About CSS
   }
 }
 .h10-about-content .desc {
-  max-width: 375px;
+  max-width: 800px;
   font-size: 18px;
   line-height: 1.444;
+  text-align: justify;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .h10-about-banner {
@@ -24997,7 +25168,7 @@ START: Process CSS
 }
 .h10-process-wrapper .h10-process-item .desc {
   margin-bottom: 0;
-  color: var(--tj-color-text-body-2);
+  color: var(--tj-color-common-white);
 }
 .h10-process-wrapper .h10-process-icon {
   font-size: 48px;
@@ -25038,10 +25209,10 @@ START: Process CSS
   justify-content: center;
   line-height: 1;
   font-weight: var(--tj-fw-sbold);
-  color: var(--tj-color-text-body-2);
+  color: var(--tj-color-common-white);
   z-index: 1;
 }
-.h10-process-wrapper .h10-process-sln::before, .h10-process-wrapper .h10-process-sln::after {
+.h10-process-wrapper .h10-process-sln::before .h10-process-wrapper .h10-process-sln::after {
   content: "";
   position: absolute;
   inset-inline-end: -8px;

@@ -8,11 +8,11 @@ START: Theme Footer CSS
 		padding-top: 0;
 		.h10-footer {
 			&-title {
-				font-size: 64px;
+				font-size: 54px;
 				color: var(--tj-color-common-white);
 
 				@media #{$xl} {
-					font-size: 58px;
+					font-size: 48px;
 				}
 
 				@media #{$lg, $md} {
@@ -57,7 +57,7 @@ START: Theme Footer CSS
 					letter-spacing: -0.03em;
 					line-height: 1;
 					padding: 5px 20px 8px;
-					border: 1px solid var(--tj-color-grey-3);
+					border: 1px solid var(--tj-color-common-white);
 					border-radius: 50px;
 					margin-top: 24px;
 					@media #{$sm,$xs} {

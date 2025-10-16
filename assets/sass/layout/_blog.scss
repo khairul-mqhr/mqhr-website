@@ -33,22 +33,31 @@ START: Blog CSS
 	border-radius: 12px;
 	overflow: hidden;
 	.blog-thumb {
-  height: 250px; // fixed height for all thumbnails
-  overflow: hidden;
-  position: relative;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.4s linear;
-  }
-
-  @media #{$xl, $lg, $xs} {
-    height: 200px; // responsive adjustment for smaller screens
-  }
-}
-
+		height: 250px;
+		overflow: hidden;
+		position: relative;
+		&::before {
+			content: "";
+			background-color: var(--tj-color-theme-dark);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			inset-inline-start: 0;
+			opacity: 0.25;
+			z-index: 1;
+			pointer-events: none;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: all 0.4s linear;
+		}
+		@media #{$xl, $lg, $xs} {
+			height: 2-0px;
+		}
+	}
 	.blog-content {
 		background-color: var(--tj-color-common-white);
 		padding: 25px 28px 35px 28px;

@@ -1,42 +1,42 @@
 $colors: (
-    common: (
-        white: #ffffff,
-        black: #000000,
-    ),
-    heading: (
-        primary: #2a0e3a, // deep lavender for contrast
-    ),
-    text: (
-        body: #2e1c3f, // dark muted purple with more contrast
-        body-2: #9a84c2, // deeper soft lilac-gray
-        body-3: #7a68a0, // more saturated pastel violet
-        body-4: #65527f, // stronger mauve tone
-        body-5: #ffffffe6, // brighter soft white overlay
-    ),
-    theme: (
-        primary: #ec6fa8, // punchier bubblegum pink
-        bg: #fff6fb, // brighter ultra-soft pink background
-        bg-2: #f9e4f2, // lighter lilac section background
-        bg-3: #2a0e3a, // dark section contrast
-        dark: #1a0a26, // deeper plum
-        dark-2: #2a0e3a,
-        dark-3: #2e1c3f,
-        dark-4: #4e3a6b,
-        dark-5: #6a5890,
-    ),
-    red: (
-        1: #f78aa0, // soft rosy accent with more pop
-    ),
-    grey: (
-        1: #f7e6f0, // brighter light lavender-gray
-        2: #e0cfe6, // deeper muted soft border tone
-        3: #ffffff1a,
-    ),
-    border: (
-        1: #eed5e6, // pale pink border
-        2: #2e1c3f,
-        3: #ffffff26,
-        4: #ffffff33,
-        5: #ec6fa826,
-    ),
+	common: (
+		white: #ffffff,
+		black: #000000,
+	),
+	heading: (
+		primary: #663695, // dark purple for headings
+	),
+	text: (
+		body: #2E2A3B, // neutral dark text
+		body-2: #6B6678, // muted secondary text
+		body-3: #AA4D9D, // light purple accent text
+		body-4: #3FB870, // green highlight text
+		body-5: #ffffffcc, // translucent white text
+	),
+	theme: (
+		primary: #3FB870, // green accent
+		bg: #ffffff, // clean white background
+		bg-2: #F7F8FA, // neutral section background
+		bg-3: #402060, // deep purple section (footer/header)
+		dark: #663695, // brand dark purple
+		dark-2: #4A2D72, // mid-dark purple
+		dark-3: #3A255E, // deeper tone for contrast
+		dark-4: #AA4D9D, // light purple accent
+		dark-5: #E2A8DD, // pale lavender highlight
+	),
+	red: (
+		1: #F56C7C, // soft coral for alerts
+	),
+	grey: (
+		1: #F5F5F7, // light gray background
+		2: #D6D6E0, // neutral border gray
+		3: #ffffff1a, // translucent overlay
+	),
+	border: (
+		1: #E1E1E6, // light neutral border
+		2: #663695, // purple border
+		3: #3FB870, // green border
+		4: #E2A8DD, // soft lavender border
+		5: #3FB87026, // green translucent border
+	),
 );
