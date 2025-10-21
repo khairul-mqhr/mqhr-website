@@ -69,11 +69,11 @@ START: Choose CSS
 	&:hover {
 		background-color: var(--tj-color-theme-primary);
 		.choose-icon {
-			color: var(--tj-color-common-white);
+			color: var(--tj-color-theme-dark);
 			animation: gelatine 0.6s;
 		}
 		.btn-icon {
-			background-color: var(--tj-color-common-white);
+			background-color: var(--tj-color-theme-dark);
 		}
 		.btn-text,
 		.desc,

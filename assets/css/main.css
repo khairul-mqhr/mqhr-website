@@ -7482,11 +7482,11 @@ START: Choose CSS
   background-color: var(--tj-color-theme-primary);
 }
 .choose-box:hover .choose-icon {
-  color: var(--tj-color-common-white);
+  color: var(--tj-color-theme-dark);
   animation: gelatine 0.6s;
 }
 .choose-box:hover .btn-icon {
-  background-color: var(--tj-color-common-white);
+  background-color: var(--tj-color-theme-dark);
 }
 .choose-box:hover .btn-text,
 .choose-box:hover .desc,
@@ -15171,7 +15171,7 @@ START: Animate CSS
 START: Hero CSS
 ----------------------------------------*/
 .h4-banner-section {
-  background-color: var(--tj-color-theme-dark);
+  background-color: var(--tj-color-common-white);
   border-radius: 12px;
   padding: 0 80px;
   position: relative;
@@ -15253,7 +15253,7 @@ START: Hero CSS
   padding: 30px;
 }
 .h4-banner-section .banner-img-area .h4-rating-box .title {
-  color: var(--tj-color-common-white);
+  color: var(--tj-color-theme-dark);
   font-size: 74px;
   line-height: 1.216;
   text-align: center;
@@ -15267,7 +15267,7 @@ START: Hero CSS
   inset-inline-start: 0;
   width: 42px;
   height: 100%;
-  background-color: var(--tj-color-common-white);
+  background-color: var(--tj-color-theme-dark);
   mask-image: url(../images/shape/leafs.svg);
   mask-repeat: no-repeat;
   mask-size: contain;
@@ -15279,7 +15279,7 @@ START: Hero CSS
   inset-inline-end: 0;
   width: 42px;
   height: 100%;
-  background-color: var(--tj-color-common-white);
+  background-color: var(--tj-color-theme-dark);
   mask-image: url(../images/shape/leafs.svg);
   mask-repeat: no-repeat;
   mask-size: contain;
@@ -15291,7 +15291,7 @@ START: Hero CSS
   }
 }
 .h4-banner-section .banner-img-area .h4-rating-box .desc {
-  color: var(--tj-color-common-white);
+  color: var(--tj-color-theme-dark);
   font-size: 18px;
   font-weight: var(--tj-fw-sbold);
   letter-spacing: -0.03em;
@@ -15387,7 +15387,7 @@ START: Hero CSS
   }
 }
 .h4-banner-content .sub-title {
-  color: var(--tj-color-common-white);
+  color: var(--tj-color-theme-primary);
   font-size: 14px;
   line-height: 1;
   letter-spacing: 1.4px;
@@ -15407,7 +15407,7 @@ START: Hero CSS
 }
 .h4-banner-content .banner-title {
   max-width: 1180px;
-  color: var(--tj-color-common-white);
+  color: var(--tj-color-theme-dark);
   font-size: 96px;
   line-height: 1.042;
   margin-bottom: 22px;
@@ -15469,7 +15469,7 @@ START: Hero CSS
 }
 .h4-banner-content .banner-desc {
   max-width: 428px;
-  color: var(--tj-color-common-white);
+  color: var(--tj-color-theme-dark);
   font-size: 18px;
   line-height: 1.444;
   padding-inline-start: 15px;
@@ -16561,20 +16561,20 @@ START: Blog CSS
   color: var(--tj-color-common-white);
 }
 .tj-careers:hover .tj-careers-tag span {
-  border: 1px dashed var(--tj-color-border-2);
-  color: var(--tj-color-text-body-2);
+  border: 1px dashed var(--tj-color-common-white);
+  color: var(--tj-color-common-white);
 }
 .tj-careers:hover .tj-careers-title a {
   color: var(--tj-color-common-white);
 }
 .tj-careers:hover .tj-careers-salary {
-  color: var(--tj-color-text-body-2);
+  color: var(--tj-color-common-white);
 }
 .tj-careers:hover .tj-careers-salary span {
   color: var(--tj-color-common-white);
 }
 .tj-careers:hover .tj-careers-bottom .location {
-  color: var(--tj-color-text-body-2);
+  color: var(--tj-color-common-white);
 }
 .tj-careers:hover .tj-careers-btn {
   color: var(--tj-color-common-white);
