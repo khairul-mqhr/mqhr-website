@@ -2,9 +2,10 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+//  Correct file paths
+require 'src/Exception.php';
+require 'src/PHPMailer.php';
+require 'src/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars(trim($_POST['cfName']));
@@ -25,21 +26,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        // ---------- SMTP configuration ----------
+        // SMTP Configuration
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'dinifarizahyazid@gmail.com';   // Gmail address
-        $mail->Password   = 'ywauxxfstdwwfxmj';       // Gmail App Password 
-        $mail->SMTPSecure = 'tls';
+        $mail->Username   = 'dinifarizahyazid@gmail.com';
+        $mail->Password   = 'ywauxxfstdwwfxmj'; // Gmail App Password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        // ---------- Recipients ----------
+        // Recipients
         $mail->setFrom('dinifarizahyazid@gmail.com', 'Website Contact');
         $mail->addAddress('dinifarizahyazid@gmail.com');
         $mail->addReplyTo($email, $name);
 
-        // ---------- Message ----------
+        // Message
         $mail->isHTML(true);
         $mail->Subject = "New Contact Form Submission: $subjectText";
         $mail->Body    = "
