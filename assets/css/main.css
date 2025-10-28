@@ -11700,10 +11700,13 @@ START: Contact CSS
 .contact-form .form-input .cf-label span {
   color: var(--tj-color-theme-primary);
 }
-.contact-form .form-input textarea:focus ~ .cf-label,
+.contact-form .form-input textarea:focus ~ .cf-label, .contact-form .form-input textarea:not(:placeholder-shown) ~ .cf-label,
 .contact-form .form-input input[type=tel]:focus ~ .cf-label,
+.contact-form .form-input input[type=tel]:not(:placeholder-shown) ~ .cf-label,
 .contact-form .form-input input[type=text]:focus ~ .cf-label,
-.contact-form .form-input input[type=email]:focus ~ .cf-label {
+.contact-form .form-input input[type=text]:not(:placeholder-shown) ~ .cf-label,
+.contact-form .form-input input[type=email]:focus ~ .cf-label,
+.contact-form .form-input input[type=email]:not(:placeholder-shown) ~ .cf-label {
   visibility: hidden;
   opacity: 0;
 }
@@ -25108,7 +25111,7 @@ START: Home 10 About CSS
   }
 }
 .h10-about-content .desc {
-  max-width: 500px;
+  max-width: 644px;
   font-size: 18px;
   line-height: 1.444;
   text-align: justify;

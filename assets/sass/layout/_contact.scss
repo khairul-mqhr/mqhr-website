@@ -109,16 +109,18 @@ START: Contact CSS
 			}
 		}
 		textarea,
-		input[type="tel"],
-		input[type="text"],
-		input[type="email"] {
-			&:focus {
+			input[type="tel"],
+			input[type="text"],
+			input[type="email"] {
+			&:focus,
+			&:not(:placeholder-shown) {
 				~ .cf-label {
-					visibility: hidden;
-					opacity: 0;
+				visibility: hidden;
+				opacity: 0;
 				}
 			}
 		}
+
 		.nice-select {
 			color: var(--tj-color-text-body-3);
 			line-height: 1.5;
