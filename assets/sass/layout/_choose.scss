@@ -69,11 +69,11 @@ START: Choose CSS
 	&:hover {
 		background-color: var(--tj-color-theme-primary);
 		.choose-icon {
-			color: var(--tj-color-theme-dark);
+			color: var(--tj-color-common-white);
 			animation: gelatine 0.6s;
 		}
 		.btn-icon {
-			background-color: var(--tj-color-theme-dark);
+			background-color: var(--tj-color-common-white);
 		}
 		.btn-text,
 		.desc,
@@ -101,7 +101,7 @@ START: Choose CSS
 	}
 }
 
-/* 🧱 Base reusable structure for all choose boxes */
+/*  Base reusable structure for all choose boxes */
 .choose-box-base {
 	height: 100%;
 	padding: 50px 28px 45px;
@@ -190,7 +190,7 @@ START: Choose CSS
 	}
 }
 
-/* 🌈 Color Variants - unified hover + border + text color */
+/* Color Variants - unified hover + border + text color */
 .choose-box-brown {
 	@extend .choose-box-base;
 	border-color: var(--tj-color-theme-dark-6);
