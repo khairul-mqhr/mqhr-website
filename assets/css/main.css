@@ -6460,6 +6460,7 @@ START: Heading CSS
 }
 .sec-heading .sec-title {
   margin-bottom: 0;
+  white-space: nowrap;
 }
 .sec-heading .sec-title span {
   color: var(--tj-color-theme-primary);
@@ -13455,6 +13456,7 @@ START: Blog Details CSS
   object-position: center;
 }
 .post-details-wrapper .blog-text h3 {
+  text-align: justify;
   margin-bottom: 25px;
 }
 .post-details-wrapper .blog-text ul {
@@ -14473,6 +14475,7 @@ blockquote cite::before {
 .blog-text .tj-faq {
   margin-bottom: 40px;
   padding-top: 10px;
+  text-align: justify;
 }
 
 .gallery {
