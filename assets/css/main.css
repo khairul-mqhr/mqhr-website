@@ -7478,17 +7478,27 @@ START: Choose CSS
 }
 .choose-box:hover {
   background-color: var(--tj-color-theme-primary);
+  /* Animate and recolor both .choose-icon and .service-icon */
+  /* Optional: also change the service-icon background like service items */
 }
-.choose-box:hover .choose-icon {
+.choose-box:hover .choose-icon,
+.choose-box:hover .service-icon {
   color: var(--tj-color-common-white);
   animation: gelatine 0.6s;
+}
+.choose-box:hover .choose-icon i,
+.choose-box:hover .service-icon i {
+  color: var(--tj-color-common-white);
+}
+.choose-box:hover .service-icon {
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 100%);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 .choose-box:hover .btn-icon {
   background-color: var(--tj-color-common-white);
 }
 .choose-box:hover .btn-text,
 .choose-box:hover .desc,
-.choose-box:hover .choose-icon,
 .choose-box:hover .title {
   color: var(--tj-color-common-white);
 }

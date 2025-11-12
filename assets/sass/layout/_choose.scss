@@ -85,24 +85,40 @@ START: Choose CSS
   }
 
   &:hover {
-    background-color: var(--tj-color-theme-primary);
+  background-color: var(--tj-color-theme-primary);
 
-    .choose-icon {
-      color: var(--tj-color-common-white);
-      animation: gelatine 0.6s;
-    }
+  /* Animate and recolor both .choose-icon and .service-icon */
+  .choose-icon,
+  .service-icon {
+    color: var(--tj-color-common-white);
+    animation: gelatine 0.6s;
 
-    .btn-icon {
-      background-color: var(--tj-color-common-white);
-    }
-
-    .btn-text,
-    .desc,
-    .choose-icon,
-    .title {
+    i {
       color: var(--tj-color-common-white);
     }
   }
+
+  /* Optional: also change the service-icon background like service items */
+  .service-icon {
+    background: linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0.3) 100%
+    );
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .btn-icon {
+    background-color: var(--tj-color-common-white);
+  }
+
+  .btn-text,
+  .desc,
+  .title {
+    color: var(--tj-color-common-white);
+  }
+}
 
   /* === Mobile layout*/
   @media #{$sm, $xs} {
