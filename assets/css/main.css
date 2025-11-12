@@ -450,8 +450,8 @@ img {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .section-gap {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 }
 
@@ -7422,12 +7422,29 @@ START: Choose CSS
 .choose-box {
   height: 100%;
   padding: 30px 18px 25px;
-  background-color: var(--tj-color-grey-1);
+  border-radius: 8px;
+  border: 1px solid var(--tj-color-theme-primary);
+  color: var(--tj-color-theme-primary);
   transition: all 0.4s ease-in-out;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  /* === Mobile layout*/
+}
+.choose-box .service-icon {
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(-45deg, rgba(30, 138, 138, 0.3) 0%, rgba(30, 138, 138, 0) 50%, rgba(30, 138, 138, 0.3) 100%);
+  border-radius: 50%;
+  border: 1px solid rgba(30, 138, 138, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.choose-box .service-icon i {
+  color: var(--tj-color-theme-primary);
 }
 .choose-box .choose-content {
   display: flex;
@@ -7438,7 +7455,7 @@ START: Choose CSS
 }
 .choose-box .choose-icon {
   display: inline-flex;
-  color: var(--tj-color-theme-dark);
+  color: var(--tj-color-theme-primary);
   font-size: 30px;
   line-height: 1;
   margin-bottom: 10px;
@@ -7450,7 +7467,7 @@ START: Choose CSS
 }
 .choose-box .title {
   font-weight: var(--tj-fw-sbold);
-  color: var(--tj-color-theme-primary);
+  color: var(--tj-color-theme-dark);
   margin-bottom: 10px;
   font-size: 20px;
 }
@@ -7477,31 +7494,39 @@ START: Choose CSS
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .choose-box {
-    padding: 20px 15px;
+    padding: 20px 16px;
   }
   .choose-box .choose-content {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: row; /* horizontal layout */
+    align-items: center; /* vertically center icon + text */
+    justify-content: flex-start;
+    gap: 20px; /* spacing between icon and text */
     text-align: left;
+    flex: 1;
   }
   .choose-box .choose-icon {
-    display: inline-flex;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
     margin-bottom: 0;
-    font-size: 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .choose-box .title {
-    font-size: 18px;
-  }
-  .choose-box .desc {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0;
   }
 }
 
 .choose-box-esg {
   height: 100%;
   padding: 40px 20px 35px;
-  background-color: var(--tj-color-grey-1);
+  border-radius: 8px;
+  border: 1px solid var(--tj-color-theme-primary);
+  color: var(--tj-color-theme-primary);
   transition: all 0.4s ease-in-out;
   border-radius: 10px;
   position: relative;
