@@ -39,6 +39,11 @@ START: Team Details CSS
 		@media #{$sm,$xs} {
 			margin-top: 20px;
 		}
+
+		strong {
+				color: var(--tj-color-theme-primary); 
+				font-weight: 700; 
+			}
 	}
 
 	.team-details__subtitle {
@@ -179,6 +184,11 @@ START: Team Details CSS
 		&__list {
 			p {
 				text-align: justify;
+
+				strong {
+				color: var(--tj-color-theme-primary); 
+				font-weight: 700; 
+			}
 			}
 
 			ul {

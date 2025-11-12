@@ -20,12 +20,31 @@ START: Home 10 About CSS
 			@media #{$sm,$xs} {
 				margin-bottom: 30px;
 			}
+
+			strong {
+				color: var(--tj-color-theme-primary); 
+				font-weight: 700; 
+			}
 		}
 		.desc {
 			max-width: 644px;
 			font-size: 18px;
 			line-height: 1.444;
 			text-align: justify;
+
+			strong {
+				color: var(--tj-color-theme-primary); 
+				font-weight: 700; 
+			}
+
+			// Mobile adjustments
+			@media #{$sm, $xs} {
+				font-size: 16px; 
+			}
+
+			@media #{$xs} {
+				font-size: 14px;
+			}
 		}
 	}
 

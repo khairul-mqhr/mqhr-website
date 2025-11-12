@@ -134,7 +134,7 @@ body {
   font-size: var(--tj-fs-body);
   font-weight: normal;
   color: var(--tj-color-text-body);
-  background-color: var(--tj-color-grey-1);
+  background-color: var(--tj-color-common-white);
   line-height: 1.5;
 }
 
@@ -7422,7 +7422,7 @@ START: Choose CSS
 .choose-box {
   height: 100%;
   padding: 50px 28px 45px;
-  background-color: var(--tj-color-common-white);
+  background-color: var(--tj-color-grey-1);
   transition: all 0.4s ease-in-out;
   border-radius: 10px;
   position: relative;
@@ -7432,50 +7432,37 @@ START: Choose CSS
 .choose-box .choose-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100%;
+  text-align: center;
 }
 .choose-box .choose-icon {
   display: inline-flex;
-  color: var(--tj-color-theme-primary);
-  font-size: 54px;
+  color: var(--tj-color-theme-dark);
+  font-size: 40px;
   line-height: 1;
-  max-width: 54px;
-  margin-bottom: 43px;
+  margin-bottom: 20px;
 }
 .choose-box .choose-icon i {
+  font-size: inherit;
   line-height: 1;
   display: inline-flex;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
-  .choose-box .choose-icon {
-    margin-bottom: 30px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
-  .choose-box .choose-icon {
-    font-size: 65px;
-    max-width: 65px;
-    margin-bottom: 20px;
-  }
-}
 .choose-box .title {
   font-weight: var(--tj-fw-sbold);
-  color: var(--tj-color-theme-dark);
-  margin-bottom: 20px;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
-  .choose-box .title {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
+  color: var(--tj-color-theme-primary);
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 .choose-box .desc {
+  font-size: 16px;
+  color: var(--tj-color-theme-dark);
   margin-bottom: 0;
 }
 .choose-box .text-btn {
   margin-top: auto;
   padding-top: 27px;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .choose-box:hover {
   background-color: var(--tj-color-theme-primary);
@@ -7492,35 +7479,135 @@ START: Choose CSS
 .choose-box:hover .title {
   color: var(--tj-color-common-white);
 }
-@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .choose-box {
-    padding: 40px 20px;
-  }
-}
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .choose-box {
     padding: 30px 15px;
   }
+  .choose-box .choose-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .choose-box .choose-icon {
+    display: none;
+  }
+  .choose-box .title {
+    font-size: 16px;
+  }
+  .choose-box .desc {
+    font-size: 14px;
+  }
 }
-.choose-box.style-2 {
-  padding: 40px 28px;
+
+.choose-box-esg {
+  height: 100%;
+  padding: 50px 28px 45px;
+  background-color: var(--tj-color-grey-1);
+  transition: all 0.4s ease-in-out;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  /* Optional: responsive tweaks */
 }
-.choose-box.style-2 .choose-icon {
-  margin-bottom: 25px;
+.choose-box-esg .desc-wrapper {
+  transition: max-height 0.3s ease;
+  overflow: hidden;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
-  .choose-box.style-2 .choose-icon {
-    margin-bottom: 20px;
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .choose-box-esg .desc-wrapper {
+    max-height: 0;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
-  .choose-box.style-2 {
+  .choose-box-esg .desc-wrapper.open {
+    max-height: 500px;
+  }
+}
+.choose-box-esg .toggle-desc-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--tj-color-theme-primary);
+  font-weight: var(--tj-fw-sbold);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .choose-box-esg .toggle-desc-btn {
+    display: inline-block;
+  }
+}
+.choose-box-esg .choose-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  color: var(--tj-color-theme-dark);
+}
+.choose-box-esg .choose-icon {
+  display: inline-flex;
+  color: var(--tj-color-theme-primary);
+  font-size: 40px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.choose-box-esg .choose-icon i {
+  font-size: inherit;
+  line-height: 1;
+  display: inline-flex;
+}
+.choose-box-esg .title {
+  font-weight: var(--tj-fw-sbold);
+  color: var(--tj-color-theme-dark);
+  margin-bottom: 10px;
+}
+.choose-box-esg .desc {
+  margin-bottom: 0;
+  color: var(--tj-color-theme-dark);
+}
+.choose-box-esg .text-btn {
+  margin-top: auto;
+  padding-top: 27px;
+  justify-content: center;
+}
+.choose-box-esg:hover {
+  background-color: var(--tj-color-theme-dark);
+}
+.choose-box-esg:hover .choose-icon {
+  color: var(--tj-color-common-white);
+  animation: gelatine 0.6s;
+}
+.choose-box-esg:hover .btn-icon {
+  background-color: var(--tj-color-common-white);
+}
+.choose-box-esg:hover .btn-text,
+.choose-box-esg:hover .desc,
+.choose-box-esg:hover .title {
+  color: var(--tj-color-common-white);
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .choose-box-esg {
     padding: 30px 15px;
+  }
+  .choose-box-esg .choose-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .choose-box-esg .choose-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .choose-box-esg .title {
+    font-size: 16px;
+  }
+  .choose-box-esg .desc {
+    font-size: 14px;
   }
 }
 
 /*  Base reusable structure for all choose boxes */
-.choose-box-base, .choose-box-orange, .choose-box-neon, .choose-box-yellow, .choose-box-maroon, .choose-box-green, .choose-box-pink, .choose-box-light, .choose-box-highlight, .choose-box-soft, .choose-box-brown {
+.choose-box-base, .choose-box-orange, .choose-box-neon, .choose-box-yellow, .choose-box-maroon, .choose-box-green, .choose-box-pink, .choose-box-light, .choose-box-purple, .choose-box-highlight, .choose-box-soft, .choose-box-brown {
   height: 100%;
   padding: 50px 28px 45px;
   background-color: #fff;
@@ -7531,13 +7618,13 @@ START: Choose CSS
   overflow: hidden;
   z-index: 1;
 }
-.choose-box-base .choose-content, .choose-box-orange .choose-content, .choose-box-neon .choose-content, .choose-box-yellow .choose-content, .choose-box-maroon .choose-content, .choose-box-green .choose-content, .choose-box-pink .choose-content, .choose-box-light .choose-content, .choose-box-highlight .choose-content, .choose-box-soft .choose-content, .choose-box-brown .choose-content {
+.choose-box-base .choose-content, .choose-box-orange .choose-content, .choose-box-neon .choose-content, .choose-box-yellow .choose-content, .choose-box-maroon .choose-content, .choose-box-green .choose-content, .choose-box-pink .choose-content, .choose-box-light .choose-content, .choose-box-purple .choose-content, .choose-box-highlight .choose-content, .choose-box-soft .choose-content, .choose-box-brown .choose-content {
   display: flex;
   flex-direction: column;
   height: 100%;
   color: inherit;
 }
-.choose-box-base .choose-icon, .choose-box-orange .choose-icon, .choose-box-neon .choose-icon, .choose-box-yellow .choose-icon, .choose-box-maroon .choose-icon, .choose-box-green .choose-icon, .choose-box-pink .choose-icon, .choose-box-light .choose-icon, .choose-box-highlight .choose-icon, .choose-box-soft .choose-icon, .choose-box-brown .choose-icon {
+.choose-box-base .choose-icon, .choose-box-orange .choose-icon, .choose-box-neon .choose-icon, .choose-box-yellow .choose-icon, .choose-box-maroon .choose-icon, .choose-box-green .choose-icon, .choose-box-pink .choose-icon, .choose-box-light .choose-icon, .choose-box-purple .choose-icon, .choose-box-highlight .choose-icon, .choose-box-soft .choose-icon, .choose-box-brown .choose-icon {
   display: inline-flex;
   font-size: 54px;
   line-height: 1;
@@ -7545,65 +7632,65 @@ START: Choose CSS
   margin-bottom: 43px;
   color: inherit;
 }
-.choose-box-base .choose-icon i, .choose-box-orange .choose-icon i, .choose-box-neon .choose-icon i, .choose-box-yellow .choose-icon i, .choose-box-maroon .choose-icon i, .choose-box-green .choose-icon i, .choose-box-pink .choose-icon i, .choose-box-light .choose-icon i, .choose-box-highlight .choose-icon i, .choose-box-soft .choose-icon i, .choose-box-brown .choose-icon i {
+.choose-box-base .choose-icon i, .choose-box-orange .choose-icon i, .choose-box-neon .choose-icon i, .choose-box-yellow .choose-icon i, .choose-box-maroon .choose-icon i, .choose-box-green .choose-icon i, .choose-box-pink .choose-icon i, .choose-box-light .choose-icon i, .choose-box-purple .choose-icon i, .choose-box-highlight .choose-icon i, .choose-box-soft .choose-icon i, .choose-box-brown .choose-icon i {
   line-height: 1;
   display: inline-flex;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
-  .choose-box-base .choose-icon, .choose-box-orange .choose-icon, .choose-box-neon .choose-icon, .choose-box-yellow .choose-icon, .choose-box-maroon .choose-icon, .choose-box-green .choose-icon, .choose-box-pink .choose-icon, .choose-box-light .choose-icon, .choose-box-highlight .choose-icon, .choose-box-soft .choose-icon, .choose-box-brown .choose-icon {
+  .choose-box-base .choose-icon, .choose-box-orange .choose-icon, .choose-box-neon .choose-icon, .choose-box-yellow .choose-icon, .choose-box-maroon .choose-icon, .choose-box-green .choose-icon, .choose-box-pink .choose-icon, .choose-box-light .choose-icon, .choose-box-purple .choose-icon, .choose-box-highlight .choose-icon, .choose-box-soft .choose-icon, .choose-box-brown .choose-icon {
     margin-bottom: 30px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
-  .choose-box-base .choose-icon, .choose-box-orange .choose-icon, .choose-box-neon .choose-icon, .choose-box-yellow .choose-icon, .choose-box-maroon .choose-icon, .choose-box-green .choose-icon, .choose-box-pink .choose-icon, .choose-box-light .choose-icon, .choose-box-highlight .choose-icon, .choose-box-soft .choose-icon, .choose-box-brown .choose-icon {
+  .choose-box-base .choose-icon, .choose-box-orange .choose-icon, .choose-box-neon .choose-icon, .choose-box-yellow .choose-icon, .choose-box-maroon .choose-icon, .choose-box-green .choose-icon, .choose-box-pink .choose-icon, .choose-box-light .choose-icon, .choose-box-purple .choose-icon, .choose-box-highlight .choose-icon, .choose-box-soft .choose-icon, .choose-box-brown .choose-icon {
     font-size: 65px;
     max-width: 65px;
     margin-bottom: 20px;
   }
 }
-.choose-box-base .title, .choose-box-orange .title, .choose-box-neon .title, .choose-box-yellow .title, .choose-box-maroon .title, .choose-box-green .title, .choose-box-pink .title, .choose-box-light .title, .choose-box-highlight .title, .choose-box-soft .title, .choose-box-brown .title {
+.choose-box-base .title, .choose-box-orange .title, .choose-box-neon .title, .choose-box-yellow .title, .choose-box-maroon .title, .choose-box-green .title, .choose-box-pink .title, .choose-box-light .title, .choose-box-purple .title, .choose-box-highlight .title, .choose-box-soft .title, .choose-box-brown .title {
   font-weight: var(--tj-fw-sbold);
   color: inherit;
   margin-bottom: 20px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
-  .choose-box-base .title, .choose-box-orange .title, .choose-box-neon .title, .choose-box-yellow .title, .choose-box-maroon .title, .choose-box-green .title, .choose-box-pink .title, .choose-box-light .title, .choose-box-highlight .title, .choose-box-soft .title, .choose-box-brown .title {
+  .choose-box-base .title, .choose-box-orange .title, .choose-box-neon .title, .choose-box-yellow .title, .choose-box-maroon .title, .choose-box-green .title, .choose-box-pink .title, .choose-box-light .title, .choose-box-purple .title, .choose-box-highlight .title, .choose-box-soft .title, .choose-box-brown .title {
     font-size: 18px;
     margin-bottom: 10px;
   }
 }
-.choose-box-base .desc, .choose-box-orange .desc, .choose-box-neon .desc, .choose-box-yellow .desc, .choose-box-maroon .desc, .choose-box-green .desc, .choose-box-pink .desc, .choose-box-light .desc, .choose-box-highlight .desc, .choose-box-soft .desc, .choose-box-brown .desc {
+.choose-box-base .desc, .choose-box-orange .desc, .choose-box-neon .desc, .choose-box-yellow .desc, .choose-box-maroon .desc, .choose-box-green .desc, .choose-box-pink .desc, .choose-box-light .desc, .choose-box-purple .desc, .choose-box-highlight .desc, .choose-box-soft .desc, .choose-box-brown .desc {
   color: inherit;
   margin-bottom: 0;
 }
-.choose-box-base .text-btn, .choose-box-orange .text-btn, .choose-box-neon .text-btn, .choose-box-yellow .text-btn, .choose-box-maroon .text-btn, .choose-box-green .text-btn, .choose-box-pink .text-btn, .choose-box-light .text-btn, .choose-box-highlight .text-btn, .choose-box-soft .text-btn, .choose-box-brown .text-btn {
+.choose-box-base .text-btn, .choose-box-orange .text-btn, .choose-box-neon .text-btn, .choose-box-yellow .text-btn, .choose-box-maroon .text-btn, .choose-box-green .text-btn, .choose-box-pink .text-btn, .choose-box-light .text-btn, .choose-box-purple .text-btn, .choose-box-highlight .text-btn, .choose-box-soft .text-btn, .choose-box-brown .text-btn {
   margin-top: auto;
   padding-top: 27px;
   justify-content: flex-start;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .choose-box-base, .choose-box-orange, .choose-box-neon, .choose-box-yellow, .choose-box-maroon, .choose-box-green, .choose-box-pink, .choose-box-light, .choose-box-highlight, .choose-box-soft, .choose-box-brown {
+  .choose-box-base, .choose-box-orange, .choose-box-neon, .choose-box-yellow, .choose-box-maroon, .choose-box-green, .choose-box-pink, .choose-box-light, .choose-box-purple, .choose-box-highlight, .choose-box-soft, .choose-box-brown {
     padding: 40px 20px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
-  .choose-box-base, .choose-box-orange, .choose-box-neon, .choose-box-yellow, .choose-box-maroon, .choose-box-green, .choose-box-pink, .choose-box-light, .choose-box-highlight, .choose-box-soft, .choose-box-brown {
+  .choose-box-base, .choose-box-orange, .choose-box-neon, .choose-box-yellow, .choose-box-maroon, .choose-box-green, .choose-box-pink, .choose-box-light, .choose-box-purple, .choose-box-highlight, .choose-box-soft, .choose-box-brown {
     padding: 30px 15px;
   }
 }
-.choose-box-base.style-2, .style-2.choose-box-orange, .style-2.choose-box-neon, .style-2.choose-box-yellow, .style-2.choose-box-maroon, .style-2.choose-box-green, .style-2.choose-box-pink, .style-2.choose-box-light, .style-2.choose-box-highlight, .style-2.choose-box-soft, .style-2.choose-box-brown {
+.choose-box-base.style-2, .style-2.choose-box-orange, .style-2.choose-box-neon, .style-2.choose-box-yellow, .style-2.choose-box-maroon, .style-2.choose-box-green, .style-2.choose-box-pink, .style-2.choose-box-light, .style-2.choose-box-purple, .style-2.choose-box-highlight, .style-2.choose-box-soft, .style-2.choose-box-brown {
   padding: 40px 28px;
 }
-.choose-box-base.style-2 .choose-icon, .style-2.choose-box-orange .choose-icon, .style-2.choose-box-neon .choose-icon, .style-2.choose-box-yellow .choose-icon, .style-2.choose-box-maroon .choose-icon, .style-2.choose-box-green .choose-icon, .style-2.choose-box-pink .choose-icon, .style-2.choose-box-light .choose-icon, .style-2.choose-box-highlight .choose-icon, .style-2.choose-box-soft .choose-icon, .style-2.choose-box-brown .choose-icon {
+.choose-box-base.style-2 .choose-icon, .style-2.choose-box-orange .choose-icon, .style-2.choose-box-neon .choose-icon, .style-2.choose-box-yellow .choose-icon, .style-2.choose-box-maroon .choose-icon, .style-2.choose-box-green .choose-icon, .style-2.choose-box-pink .choose-icon, .style-2.choose-box-light .choose-icon, .style-2.choose-box-purple .choose-icon, .style-2.choose-box-highlight .choose-icon, .style-2.choose-box-soft .choose-icon, .style-2.choose-box-brown .choose-icon {
   margin-bottom: 25px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
-  .choose-box-base.style-2 .choose-icon, .style-2.choose-box-orange .choose-icon, .style-2.choose-box-neon .choose-icon, .style-2.choose-box-yellow .choose-icon, .style-2.choose-box-maroon .choose-icon, .style-2.choose-box-green .choose-icon, .style-2.choose-box-pink .choose-icon, .style-2.choose-box-light .choose-icon, .style-2.choose-box-highlight .choose-icon, .style-2.choose-box-soft .choose-icon, .style-2.choose-box-brown .choose-icon {
+  .choose-box-base.style-2 .choose-icon, .style-2.choose-box-orange .choose-icon, .style-2.choose-box-neon .choose-icon, .style-2.choose-box-yellow .choose-icon, .style-2.choose-box-maroon .choose-icon, .style-2.choose-box-green .choose-icon, .style-2.choose-box-pink .choose-icon, .style-2.choose-box-light .choose-icon, .style-2.choose-box-purple .choose-icon, .style-2.choose-box-highlight .choose-icon, .style-2.choose-box-soft .choose-icon, .style-2.choose-box-brown .choose-icon {
     margin-bottom: 20px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
-  .choose-box-base.style-2, .style-2.choose-box-orange, .style-2.choose-box-neon, .style-2.choose-box-yellow, .style-2.choose-box-maroon, .style-2.choose-box-green, .style-2.choose-box-pink, .style-2.choose-box-light, .style-2.choose-box-highlight, .style-2.choose-box-soft, .style-2.choose-box-brown {
+  .choose-box-base.style-2, .style-2.choose-box-orange, .style-2.choose-box-neon, .style-2.choose-box-yellow, .style-2.choose-box-maroon, .style-2.choose-box-green, .style-2.choose-box-pink, .style-2.choose-box-light, .style-2.choose-box-purple, .style-2.choose-box-highlight, .style-2.choose-box-soft, .style-2.choose-box-brown {
     padding: 30px 15px;
   }
 }
@@ -7636,6 +7723,16 @@ START: Choose CSS
 .choose-box-highlight:hover {
   background-color: var(--tj-color-theme-dark-8);
   border-color: var(--tj-color-theme-dark-8);
+  color: #fff;
+}
+
+.choose-box-purple {
+  border-color: var(--tj-color-theme-dark);
+  color: var(--tj-color-theme-dark);
+}
+.choose-box-purple:hover {
+  background-color: var(--tj-color-theme-dark);
+  border-color: var(--tj-color-theme-dark);
   color: #fff;
 }
 
@@ -12985,6 +13082,10 @@ START: Team Details CSS
     margin-top: 20px;
   }
 }
+.team-details__content strong {
+  color: var(--tj-color-theme-primary);
+  font-weight: 700;
+}
 .team-details .team-details__subtitle {
   margin-bottom: 16px;
   text-align: center;
@@ -13117,6 +13218,10 @@ START: Team Details CSS
 }
 .team-details__experience__list p {
   text-align: justify;
+}
+.team-details__experience__list p strong {
+  color: var(--tj-color-theme-primary);
+  font-weight: 700;
 }
 .team-details__experience__list ul {
   display: flex;
@@ -15538,7 +15643,7 @@ START: Choose CSS
   }
 }
 .tj-choose-section .countup-item.style-2 .count-icon {
-  background-color: var(--tj-color-theme-dark);
+  background-color: var(--tj-color-theme-primary);
   display: inline-flex;
   color: var(--tj-color-theme-primary);
   font-size: 54px;
@@ -25010,10 +25115,14 @@ START: Hero CSS
 START: Service CSS
 ----------------------------------------*/
 .h10-service-wrapper .service-item.style-4 {
-  padding: 30px 30px 35px;
   position: relative;
   border-radius: 8px;
+  border: 1px solid var(--tj-color-theme-primary);
+  color: var(--tj-color-theme-primary);
+  padding: 30px 30px 35px;
+  transition: all 0.3s ease;
   z-index: 0;
+  /* === Mobile-layout improvements === */
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .h10-service-wrapper .service-item.style-4 {
@@ -25044,7 +25153,6 @@ START: Service CSS
   top: 0;
   width: 8px;
   height: 8px;
-  background: url('data:image/svg+xml,<svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11"><path d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z" fill="%23ecf0f0"></path></svg>');
   transform: rotate(90deg);
 }
 .h10-service-wrapper .service-item.style-4 .h10-service-sln::after {
@@ -25077,18 +25185,61 @@ START: Service CSS
 .h10-service-wrapper .service-item.style-4 .text-btn {
   transform: translateX(calc(-100% + 30px));
 }
+.h10-service-wrapper .service-item.style-4:hover {
+  border-color: var(--tj-color-theme-primary);
+  background-color: var(--tj-color-theme-primary);
+  color: #fff;
+}
+.h10-service-wrapper .service-item.style-4:hover .h10-service-sln {
+  color: #fff;
+}
+.h10-service-wrapper .service-item.style-4:hover .service-icon i {
+  color: #fff;
+}
+.h10-service-wrapper .service-item.style-4:hover .desc {
+  color: #fff;
+}
 .h10-service-wrapper .service-item.style-4:hover .service-icon {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 100%);
   backdrop-filter: blur(15px);
 }
-.h10-service-wrapper .service-item.style-4:hover .service-icon i {
-  color: var(--tj-color-common-white);
-}
-.h10-service-wrapper .service-item.style-4:hover .desc {
-  color: var(--tj-color-grey-1);
-}
 .h10-service-wrapper .service-item.style-4:hover .text-btn {
   transform: translateX(0);
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .h10-service-wrapper .service-item.style-4 {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 12px;
+    padding: 20px 16px;
+  }
+  .h10-service-wrapper .service-item.style-4 .service-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+    font-size: 32px;
+  }
+  .h10-service-wrapper .service-item.style-4 .h10-service-sln {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    color: var(--tj-color-theme-primary);
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .h10-service-wrapper .service-item.style-4 .h10-service-sln::before, .h10-service-wrapper .service-item.style-4 .h10-service-sln::after {
+    display: none;
+  }
+  .h10-service-wrapper .service-item.style-4 .service-content {
+    flex: 1;
+  }
+  .h10-service-wrapper .service-item.style-4 .title {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0;
+  }
 }
 
 /* !END: Service CSS */
@@ -25119,11 +25270,29 @@ START: Home 10 About CSS
     margin-bottom: 30px;
   }
 }
+.h10-about-content-wrapper strong {
+  color: var(--tj-color-theme-primary);
+  font-weight: 700;
+}
 .h10-about-content .desc {
   max-width: 644px;
   font-size: 18px;
   line-height: 1.444;
   text-align: justify;
+}
+.h10-about-content .desc strong {
+  color: var(--tj-color-theme-primary);
+  font-weight: 700;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .h10-about-content .desc {
+    font-size: 16px;
+  }
+}
+@media (max-width: 575px) {
+  .h10-about-content .desc {
+    font-size: 14px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .h10-about-banner {
