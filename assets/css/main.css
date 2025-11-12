@@ -439,8 +439,8 @@ img {
 }
 
 .section-gap {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .section-gap {
@@ -450,8 +450,8 @@ img {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .section-gap {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
@@ -7421,7 +7421,7 @@ START: Choose CSS
 
 .choose-box {
   height: 100%;
-  padding: 50px 28px 45px;
+  padding: 30px 18px 25px;
   background-color: var(--tj-color-grey-1);
   transition: all 0.4s ease-in-out;
   border-radius: 10px;
@@ -7439,9 +7439,9 @@ START: Choose CSS
 .choose-box .choose-icon {
   display: inline-flex;
   color: var(--tj-color-theme-dark);
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .choose-box .choose-icon i {
   font-size: inherit;
@@ -7453,11 +7453,6 @@ START: Choose CSS
   color: var(--tj-color-theme-primary);
   margin-bottom: 10px;
   font-size: 20px;
-}
-.choose-box .desc {
-  font-size: 16px;
-  color: var(--tj-color-theme-dark);
-  margin-bottom: 0;
 }
 .choose-box .text-btn {
   margin-top: auto;
@@ -7476,22 +7471,27 @@ START: Choose CSS
 }
 .choose-box:hover .btn-text,
 .choose-box:hover .desc,
+.choose-box:hover .choose-icon,
 .choose-box:hover .title {
   color: var(--tj-color-common-white);
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .choose-box {
-    padding: 30px 15px;
+    padding: 20px 15px;
   }
   .choose-box .choose-content {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    text-align: left;
   }
   .choose-box .choose-icon {
-    display: none;
+    display: inline-flex;
+    margin-bottom: 0;
+    font-size: 20px;
   }
   .choose-box .title {
-    font-size: 16px;
+    font-size: 18px;
   }
   .choose-box .desc {
     font-size: 14px;
@@ -7500,7 +7500,7 @@ START: Choose CSS
 
 .choose-box-esg {
   height: 100%;
-  padding: 50px 28px 45px;
+  padding: 40px 20px 35px;
   background-color: var(--tj-color-grey-1);
   transition: all 0.4s ease-in-out;
   border-radius: 10px;
@@ -7548,7 +7548,7 @@ START: Choose CSS
 .choose-box-esg .choose-icon {
   display: inline-flex;
   color: var(--tj-color-theme-primary);
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1;
   margin-bottom: 20px;
 }
@@ -7588,18 +7588,18 @@ START: Choose CSS
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .choose-box-esg {
-    padding: 30px 15px;
+    padding: 20px 10px;
   }
   .choose-box-esg .choose-content {
     flex-direction: column;
     align-items: center;
   }
   .choose-box-esg .choose-icon {
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 15px;
   }
   .choose-box-esg .title {
-    font-size: 16px;
+    font-size: 20px;
   }
   .choose-box-esg .desc {
     font-size: 14px;
@@ -14578,6 +14578,10 @@ blockquote cite::before {
 .blog-text .tj-faq {
   margin-bottom: 40px;
   padding-top: 10px;
+}
+.blog-text strong {
+  color: var(--tj-color-theme-primary);
+  font-weight: 700;
 }
 
 .gallery {
@@ -25114,6 +25118,25 @@ START: Hero CSS
 /**----------------------------------------
 START: Service CSS
 ----------------------------------------*/
+.h10-service-wrapper {
+  /* === Desktop: make items equal height === */
+}
+@media not all and (max-width: 767px) {
+  .h10-service-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .h10-service-wrapper .col-lg-3,
+  .h10-service-wrapper .col-md-6 {
+    display: flex;
+  }
+  .h10-service-wrapper .service-item.style-4 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
 .h10-service-wrapper .service-item.style-4 {
   position: relative;
   border-radius: 8px;
@@ -25122,7 +25145,7 @@ START: Service CSS
   padding: 30px 30px 35px;
   transition: all 0.3s ease;
   z-index: 0;
-  /* === Mobile-layout improvements === */
+  /* === Mobile layout improvements (unchanged) === */
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .h10-service-wrapper .service-item.style-4 {
@@ -25160,6 +25183,20 @@ START: Service CSS
   top: auto;
   inset-inline-end: 0;
   bottom: -8px;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .h10-service-wrapper .service-item.style-4 .h10-service-sln {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    color: var(--tj-color-theme-primary);
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .h10-service-wrapper .service-item.style-4 .h10-service-sln::before, .h10-service-wrapper .service-item.style-4 .h10-service-sln::after {
+    display: none;
+  }
 }
 .h10-service-wrapper .service-item.style-4 .service-icon {
   width: 90px;

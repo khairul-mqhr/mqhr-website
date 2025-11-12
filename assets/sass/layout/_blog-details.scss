@@ -1022,6 +1022,12 @@ blockquote {
 		margin-bottom: 40px;
 		padding-top: 10px;
 	}
+
+	strong {
+				color: var(--tj-color-theme-primary); 
+				font-weight: 700; 
+			}
+	
 }
 .gallery {
 	position: relative;

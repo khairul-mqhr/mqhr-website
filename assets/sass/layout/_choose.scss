@@ -18,7 +18,7 @@ START: Choose CSS
 
 .choose-box {
   height: 100%;
-  padding: 50px 28px 45px;
+  padding: 30px 18px 25px;
   background-color: var(--tj-color-grey-1);
   transition: all 0.4s ease-in-out;
   border-radius: 10px;
@@ -37,9 +37,9 @@ START: Choose CSS
   .choose-icon {
     display: inline-flex;
     color: var(--tj-color-theme-dark);
-    font-size: 40px;
+    font-size: 30px;
     line-height: 1;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     i {
       font-size: inherit;
@@ -53,12 +53,6 @@ START: Choose CSS
     color: var(--tj-color-theme-primary);
     margin-bottom: 10px;
     font-size: 20px;
-  }
-
-  .desc {
-    font-size: 16px;
-    color: var(--tj-color-theme-dark);
-    margin-bottom: 0;
   }
 
   .text-btn {
@@ -81,26 +75,31 @@ START: Choose CSS
 
     .btn-text,
     .desc,
+	.choose-icon,
     .title {
       color: var(--tj-color-common-white);
     }
   }
 
-  // Responsive tweaks for mobile
+  // Responsivefor mobile
   @media #{$sm, $xs} {
-    padding: 30px 15px;
+    padding: 20px 15px;
 
     .choose-content {
-      flex-direction: column;
+      flex-direction: row;  
       align-items: center;
+      justify-content: space-between;
+      text-align: left;
     }
 
     .choose-icon {
-      display: none; // hide icon on mobile
+      display: inline-flex;       
+      margin-bottom: 0;          
+      font-size: 20px;     
     }
 
     .title {
-      font-size: 16px;
+      font-size: 18px;
     }
 
     .desc {
@@ -109,10 +108,9 @@ START: Choose CSS
   }
 }
 
-
 .choose-box-esg {
   height: 100%;
-  padding: 50px 28px 45px;
+  padding: 40px 20px 35px;
   background-color: var(--tj-color-grey-1);
   transition: all 0.4s ease-in-out;
   border-radius: 10px;
@@ -161,12 +159,12 @@ START: Choose CSS
   .choose-icon {
     display: inline-flex;
     color: var(--tj-color-theme-primary);
-    font-size: 40px;          // adjust your icon size here
+    font-size: 30px;          
     line-height: 1;
-    margin-bottom: 20px;      // space between icon and title
+    margin-bottom: 20px;   
 
     i {
-      font-size: inherit;     // make <i> inherit size
+      font-size: inherit; 
       line-height: 1;
       display: inline-flex;
     }
@@ -210,7 +208,7 @@ START: Choose CSS
 
   /* Optional: responsive tweaks */
   @media #{$sm, $xs} {
-    padding: 30px 15px;
+    padding: 20px 10px;
 
     .choose-content {
       flex-direction: column;   // keep stacked on mobile
@@ -218,12 +216,12 @@ START: Choose CSS
     }
 
     .choose-icon {
-      font-size: 30px;          // same as desktop
+      font-size: 20px;          // same as desktop
       margin-bottom: 15px;
     }
 
     .title {
-      font-size: 16px;
+      font-size: 20px;
     }
 
     .desc {
@@ -231,7 +229,6 @@ START: Choose CSS
     }
   }
 }
-
 
 /*  Base reusable structure for all choose boxes */
 .choose-box-base {

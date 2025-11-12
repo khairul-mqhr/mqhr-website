@@ -5,13 +5,31 @@ START: Service CSS
 ----------------------------------------*/
 .h10-service {
   &-wrapper {
+    /* === Desktop: make items equal height === */
+    @media not all and (max-width: 767px) { // only desktop
+      display: flex;
+      flex-wrap: wrap;
+
+      .col-lg-3,
+      .col-md-6 {
+        display: flex; // allows child to stretch
+      }
+
+      .service-item.style-4 {
+        flex: 1; // stretch to full height of column
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+    }
+
     .service-item.style-4 {
       position: relative;
       border-radius: 8px;
       border: 1px solid var(--tj-color-theme-primary); 
       color: var(--tj-color-theme-primary);           
       padding: 30px 30px 35px;
-      transition: all 0.3s ease;                     // smooth hover effect
+      transition: all 0.3s ease;
       z-index: 0;
 
       @media #{$sm, $xs} {
@@ -52,6 +70,21 @@ START: Service CSS
           inset-inline-end: 0;
           bottom: -8px;
         }
+
+        @media #{$sm, $xs} {
+          position: static;
+          width: auto;
+          height: auto;
+          background: none;
+          color: var(--tj-color-theme-primary);
+          font-size: 14px;
+          margin-bottom: 0;
+
+          &::before,
+          &::after {
+            display: none;
+          }
+        }
       }
 
       .service-icon {
@@ -79,22 +112,21 @@ START: Service CSS
         transform: translateX(calc(-100% + 30px));
       }
 
-      // ---------------- Hover effect ----------------
       &:hover {
         border-color: var(--tj-color-theme-primary);
         background-color: var(--tj-color-theme-primary);
         color: #fff;
 
         .h10-service-sln {
-          color: #fff; // number turns white
+          color: #fff;
         }
 
         .service-icon i {
-          color: #fff; // icon turns white
+          color: #fff;
         }
 
         .desc {
-          color: #fff; // optional description text
+          color: #fff;
         }
 
         .service-icon {
@@ -112,7 +144,7 @@ START: Service CSS
         }
       }
 
-      /* === Mobile-layout improvements === */
+      /* === Mobile layout improvements (unchanged) === */
       @media #{$sm, $xs} {
         display: flex;
         align-items: center;
@@ -155,5 +187,4 @@ START: Service CSS
     }
   }
 }
-
 /* !END: Service CSS */
