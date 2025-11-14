@@ -11704,7 +11704,7 @@ START: Contact CSS
   display: block;
   font-size: 14px;
   line-height: 1;
-  color: var(--tj-color-grey-1);
+  color: var(--tj-color-grey-2);
   margin-bottom: 7px;
 }
 .contact-info .contact-item a:hover {
