@@ -215,3 +215,23 @@
 .tji-window:before {
 	content: "\e91d";
 }
+
+.tji-leaf:before {
+  content: "\273d";
+}
+
+.tji-cloud:before {
+  content: "\2601";
+}
+
+.tji-esg-1:before {
+  content: "\1f6e2";
+}
+
+.tji-esg-2:before {
+  content: "\268c";
+}
+
+.tji-esg-3:before {
+  content: "\1f5d8";
+}

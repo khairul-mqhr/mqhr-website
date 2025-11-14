@@ -152,129 +152,133 @@ START: Choose CSS
   }
 }
 
+/* ================================
+   ESG Choose Box (Updated Version)
+=================================== */
+
 .choose-box-esg {
   height: 100%;
   padding: 40px 20px 35px;
-  border-radius: 8px;
-  border: 1px solid var(--tj-color-theme-primary); 
+  border-radius: 10px;
+  border: 1px solid var(--tj-color-theme-primary);
   color: var(--tj-color-theme-primary);
   transition: all 0.4s ease-in-out;
-  border-radius: 10px;
   position: relative;
   overflow: hidden;
   z-index: 1;
 
-  .desc-wrapper {
-    transition: max-height 0.3s ease;
-    overflow: hidden;
-
-    @media #{$sm, $xs} {
-      max-height: 0;
-    }
-
-    &.open {
-      @media #{$sm, $xs} {
-        max-height: 500px; // adjust as needed
-      }
-    }
-  }
-
-  .toggle-desc-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--tj-color-theme-primary);
-    font-weight: var(--tj-fw-sbold);
-    margin-bottom: 10px;
-    cursor: pointer;
-
-    @media #{$sm, $xs} {
-      display: inline-block;
-    }
-  }
-
-  .choose-content {
-    display: flex;
-    flex-direction: column;   // stacked layout
-    align-items: center;      // center horizontally
-    height: 100%;
-    text-align: center;       // center text
-	color: var(--tj-color-theme-dark);
-  }
-
-  .choose-icon {
+  /* Service Icon */
+  .service-icon {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(
+      -45deg,
+      rgba(30, 138, 138, 0.3) 0%,
+      rgba(30, 138, 138, 0) 50%,
+      rgba(30, 138, 138, 0.3) 100%
+    );
+    border-radius: 50%;
+    border: 1px solid rgba(30, 138, 138, 0.15);
     display: inline-flex;
-    color: var(--tj-color-theme-primary);
-    font-size: 30px;          
-    line-height: 1;
-    margin-bottom: 20px;   
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 
     i {
-      font-size: inherit; 
-      line-height: 1;
-      display: inline-flex;
+      color: var(--tj-color-theme-primary);
+      font-size: inherit;
     }
+  }
+
+  /* Content Structure */
+  .choose-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--tj-color-theme-dark);
+    height: 100%;
   }
 
   .title {
     font-weight: var(--tj-fw-sbold);
     color: var(--tj-color-theme-dark);
     margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .desc-wrapper {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
   }
 
   .desc {
     margin-bottom: 0;
-	color: var(--tj-color-theme-dark);
+    color: var(--tj-color-theme-dark);
   }
 
-  .text-btn {
-    margin-top: auto;
-    padding-top: 27px;
-    justify-content: center;  // center button if any
-  }
-
+  /* Hover Style */
   &:hover {
-    background-color: var(--tj-color-theme-dark);
+    background-color: var(--tj-color-theme-primary);
 
-    .choose-icon {
-      color: var(--tj-color-common-white);
+    .service-icon {
+      background: linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(255, 255, 255, 0.3) 100%
+      );
+      border-color: rgba(255, 255, 255, 0.15);
       animation: gelatine 0.6s;
+
+      i {
+        color: var(--tj-color-common-white);
+      }
     }
 
-    .btn-icon {
-      background-color: var(--tj-color-common-white);
-    }
-
-    .btn-text,
-    .desc,
-    .title {
+    .title,
+    .desc {
       color: var(--tj-color-common-white);
     }
   }
 
-  /* Optional: responsive tweaks */
+  /* ============================
+     MOBILE LAYOUT (icon + title ONLY)
+  ============================= */
   @media #{$sm, $xs} {
-    padding: 20px 10px;
+    padding: 20px 16px;
 
     .choose-content {
-      flex-direction: column;   // keep stacked on mobile
+      flex-direction: row;
       align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      text-align: left;
     }
 
-    .choose-icon {
-      font-size: 20px;          // same as desktop
-      margin-bottom: 15px;
+    .service-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 22px;
+      margin-bottom: 0;
+      flex-shrink: 0;
     }
 
     .title {
-      font-size: 20px;
+      font-size: 16px;
+      line-height: 1.4;
+      margin: 0;
     }
 
-    .desc {
-      font-size: 14px;
+    /* 🚫 Hide description on mobile */
+    .desc-wrapper {
+      display: none !important;
     }
   }
 }
+
+
 
 /*  Base reusable structure for all choose boxes */
 .choose-box-base {
