@@ -221,7 +221,7 @@
 }
 
 .tji-cloud:before {
-  content: "\2756";
+  content: "\271c";
 }
 
 .tji-esg-1:before {
@@ -234,4 +234,8 @@
 
 .tji-esg-3:before {
   content: "\271c";
+}
+
+.tji-cloud-1:before {
+  content: "\2618";
 }

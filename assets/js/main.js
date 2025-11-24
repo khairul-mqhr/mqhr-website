@@ -444,9 +444,7 @@ Progressbar js
 			centeredSlides: true,
 			loop: true,
 			speed: 1500,
-			autoplay: {
-				delay: 3000,
-			},
+			autoplay: false,
 			navigation: {
 				nextEl: ".slider-next",
 				prevEl: ".slider-prev",
