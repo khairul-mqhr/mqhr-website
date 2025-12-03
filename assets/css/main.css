@@ -2859,7 +2859,6 @@ START: Theme Footer CSS
 }
 
 .footer-contact-info {
-  max-width: 230px;
   width: 100%;
 }
 .footer-contact-info .contact-item {
@@ -10856,6 +10855,7 @@ START: Blog CSS
   height: 100%;
   border-radius: 12px;
   overflow: hidden;
+  border: 1px solid var(--tj-color-theme-dark);
 }
 .blog-item .blog-thumb {
   height: 250px;
@@ -10882,7 +10882,7 @@ START: Blog CSS
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), (max-width: 575px) {
   .blog-item .blog-thumb {
-    height: 2px;
+    height: 220px;
   }
 }
 .blog-item .blog-content {
@@ -11074,11 +11074,11 @@ START: Blog CSS
 .blog-date {
   position: absolute;
   inset-inline-start: 15px;
-  top: 15px;
+  bottom: 15px;
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 20px;
+  backdrop-filter: blur(8px);
+  padding: 10px;
   border-radius: 6px;
   z-index: 2;
 }

@@ -50,7 +50,7 @@
       <div class="offcanvas-text">
         <p>
           myQuickHR Sdn. Bhd. is a leading HR technology company dedicated to transforming human resource management 
-          through innovative, AI-driven solutions. We empower organizations with smarter, faster, and more connected 
+          through innovative, AI-driven solutions. We empower organizations with smarter, faster and more connected 
           HR systems that streamline operations and enhance productivity.
         </p>
       </div>
@@ -64,7 +64,7 @@
           </div>
           <div class="contact-item">
             <span class="subtitle">Email</span>
-            <a class="contact-link" href="mailto:sales@myQuickHR.com">sales@myQuickHR.com</a>
+            <a class="contact-link" href="mailto:sales@myquickhr.com">sales@myquickhr.com</a>
           </div>
           <div class="contact-item">
             <span class="subtitle">Location</span>
@@ -110,7 +110,7 @@
             </div>
             <div class="contact-item">
               <span class="subtitle">Email</span>
-              <a class="contact-link" href="mailto:sales@myQuickHR.com">sales@myQuickHR.com</a>
+              <a class="contact-link" href="mailto:sales@myquickhr.com">sales@myquickhr.com</a>
             </div>
             <div class="contact-item">
               <span class="subtitle">Location</span>
@@ -354,47 +354,83 @@
                     <ul>
                         <li><span class="first-child">Category</span><span>HR Implementation</span></li>
                         <li><span class="first-child">Number</span><span>HR1025</span></li>
-                        <li><span class="first-child">Company</span><span>MQHR Solutions</span></li>
-                        <li><span class="first-child">Website</span><span>www.mqhr.com</span></li>
                         <li><span class="first-child">Experience</span><span>3+ Years</span></li>
                         <li><span class="first-child">Vacancy</span><span>02 Available</span></li>
-                        <li><span class="first-child">Apply Before</span><span>Oct 30, 2025</span></li>
                     </ul>
                     </div>
                 </div>
 
-                <!-- Apply form -->
                 <div class="tj-sidebar-widget wow fadeInUp" data-wow-delay="0.3s">
-                    <h4 class="widget-title">Apply Online</h4>
-                    <div class="tj-careers-form">
-                    <form action="#">
-                        <div class="form-input">
-                        <input type="text" name="cr_name" placeholder="Full name*">
-                        </div>
-                        <div class="form-input">
-                        <input type="email" name="cr_email" placeholder="Enter email*">
-                        </div>
-                        <div class="form-input">
-                        <input type="text" name="cr_phone" placeholder="Phone number*">
-                        </div>
-                        <div class="form-input">
-                        <textarea name="cr_cover_letter" placeholder="Cover letter*"></textarea>
-                        </div>
-                        <div class="form-input reduce">
-                        <label class="label" for="inputFile">Attach Resume*</label>
-                        <input type="file" id="inputFile">
-                        </div>
-                        <div class="tj-careers-button">
-                        <button type="submit" class="tj-primary-btn">
-                            <span class="btn-text"><span>Submit Now</span></span>
-                            <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                        </button>
-                        </div>
-                    </form>
-                    </div>
+                      <h4 class="widget-title">Apply Online</h4>
+                      <div class="tj-careers-form">
+
+                          <form id="job-form" method="POST" enctype="multipart/form-data"> 
+
+                              <div class="form-input">
+                                  <input type="text" name="cr_name" placeholder="Full name*" required>
+                              </div>
+
+                              <div class="form-input">
+                                  <input type="email" name="cr_email" placeholder="Enter email*" required>
+                              </div>
+
+                              <div class="form-input">
+                                  <input type="text" name="cr_phone" placeholder="Phone number*" required>
+                              </div>
+
+                              <div class="form-input">
+                                  <textarea name="cr_cover_letter" placeholder="Cover letter*" required></textarea>
+                              </div>
+
+                              <div class="form-input reduce">
+                                  <label class="label" for="inputFile">Attach Resume*</label>
+                                  <input type="file" id="inputFile" name="inputFile" required>
+                              </div>
+
+                              <div class="tj-careers-button">
+                                  <button type="submit" class="tj-primary-btn">
+                                      <span class="btn-text"><span>Submit Now</span></span>
+                                      <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                                  </button>
+                              </div>
+                          </form>
+                          
+                          <div id="job-form-result" style="margin-top: 15px;"></div>
+                          
+                      </div>
+                  </div>
+
+                  </aside>
                 </div>
-                </aside>
-            </div>
+
+                <script>
+                document.getElementById("job-form").addEventListener("submit", function(e) {
+                    e.preventDefault();
+
+                    const form = this;
+                    const formData = new FormData(form);
+                    const result = document.getElementById("job-form-result");
+                    
+                    result.innerHTML = "<span style='color:blue;'>Sending application...</span>"; 
+
+                    fetch("job.php", {
+                        method: "POST",
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        result.innerHTML = data; 
+                        
+                        if (data.includes("submitted successfully")) {
+                            form.reset();
+                        }
+                    })
+                    .catch(error => {
+                        result.innerHTML = "<span style='color:red;'>A network error occurred. Check PHP file path.</span>";
+                        console.error("Error:", error);
+                    });
+                });
+                </script>
             </div>
         </div>
         </section>
@@ -411,8 +447,8 @@
                       <h2 class="h10-footer-title text-anim">
                     Smart HR,<br>Powered by AI
                       </h2>
-                      <a class="text-btn wow fadeInUp" data-wow-delay=".3s" href="mailto:sales@myQuickHR.com">
-                      <span class="btn-text"><span>sales@myQuickHR.com</span></span>
+                      <a class="text-btn wow fadeInUp" data-wow-delay=".3s" href="mailto:sales@myquickhr.com">
+                      <span class="btn-text"><span>sales@myquickhr.com</span></span>
                       </a>
                       <div class="bg-shape-widget wow fadeInUpBig" data-wow-delay=".7s"></div>
                   </div>
@@ -423,11 +459,11 @@
                       <h5 class="title">Our Office</h5>
                       <div class="footer-contact-info">
                       <div class="contact-item">
-                          <span>Unit 15-08, Level 15, Tower B, Vertical Business Suite, Bangsar South, 59200<br/> Kuala Lumpur, Malaysia</span>
+                          <span>Unit 15-08, Level 15, Tower B,<br>Vertical Business Suite,<br>Bangsar South, 59200<br/> Kuala Lumpur, Malaysia</span>
                       </div>
                       <div class="contact-item">
                           <a href="tel:+60322424015" class="d-flex align-items-center"><i class="fa-solid fa-phone me-2"></i><span>(+603) 2242 4015</span></a>
-                          <a href="mailto:sales@myQuickHR.com" class="d-flex align-items-center"><i class="fa-solid fa-envelope me-2"></i><span>sales@myQuickHR.com</span></a>
+                          <a href="mailto:sales@myquickhr.com" class="d-flex align-items-center"><i class="fa-solid fa-envelope me-2"></i><span>sales@myquickhr.com</span></a>
                           
                       </div>
                       <div class="contact-item">
@@ -456,7 +492,7 @@
                 <div class="col-12">
                 <div class="copyright-content-area">
                     <div class="copyright-text">
-                    <p>&copy; 2025 <a href="https://www.myQuickHR.com" target="_blank">myQuickHR</a> All rights reserved.</p>
+                    <p>&copy; 2025 <a href="https://www.myquickhr.com" target="_blank">myQuickHR</a> All rights reserved.</p>
                     </div>
                     
                 </div>

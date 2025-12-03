@@ -1970,7 +1970,7 @@ div.woocommerce .woocommerce-MyAccount-content .tj-btn:hover {
   scrollbar-color: rgba(245, 9, 99, 0.5) #fff;
 }
 .cartmini__widget .product_list_widget::-webkit-scrollbar {
-  display: thin; /* for Chrome, Safari, and Opera */
+  display: thin; /* for Chrome, Safari and Opera */
 }
 .cartmini__widget .woocommerce-mini-cart__buttons {
   padding: 20px;
